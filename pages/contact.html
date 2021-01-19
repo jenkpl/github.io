@@ -23,8 +23,9 @@
         
         <nav class="topshop">
                <div class="search">
-                <label for="srch"><span class="fas fa-search"></span></label>
-                   <input id="srch" type="search" value="search" name="q" aria-label="Search through site content"></div>
+                <label for="showSearch" class="showSearch"><span class="fas fa-search" aria-hidden="true"></span></label>
+                <input type="checkbox" id="showSearch" role="button">
+                   <input id="srch" type="text" value="search"></div>
                 <div class="shop">
                 <ul>
                 <li><a href="#">log in</a></li>
@@ -35,11 +36,11 @@
             </nav>
             
             <header>
-               
+               <div class="holder">
                 <a href="index.html">
                     <img class="logoTop" src="../images/logoMitch.gif" alt="logo"></a>
                 <h1>San Diego's Original Surf Shop - since 1967!</h1>
-                
+                </div>
             <label for="showMenu" class="showMenu">
            <span id="hamb" class="fas fa-bars" aria-hidden="true"></span></label>
            <input type="checkbox" id="showMenu" role="button">

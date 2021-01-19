@@ -201,8 +201,10 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
     4. HEADER AND NAV 
 ********************************************************/
 /*-----top shopping bar-----*/
-.topshop {                                   
-    background-color: #96B5D3;                   /*JEN ADDS POSITION FIXED*/
+.topshop {                
+    width: 100%;/*JEN ADDed*/
+    background-color: #96B5D3;   
+    position: fixed;/*JEN ADDED POSITION FIXED*/
     display: flex;
     font-size: 12px;
     justify-content: space-between;
@@ -210,13 +212,21 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
 .topshop input{
     border-radius: 3px;
     color: #4f4f4f;
-    font-size1: .8rem;
+    font-size: 1.2rem; /*Jen added*/
+    margin: 4px 5px;  /*Jen added*/
+}
+input#showSearch, input#srch{
+    display: none;
+}
+#showSearch:checked + input#srch{
+    display: inline-block}
 }
 .topshop ul { list-style-type: none; }                      /* ------ 3. Descendant Selector (contextual selector) ------- */
 .topshop span {
     color:#107099;
     display: inline-block;
     font-size: 14px;
+    padding: 5px;  /*Jen added*/
 }
 .shop li { display: inline-block; }                            
 nav ul li {
@@ -227,6 +237,7 @@ nav ul li {
 }
 nav ul li:hover { background-color: #ffdd7b; }
 .logoTop {
+    margin-top: 15%;
     display: inline-block;
     width: 30%;
 }
@@ -240,12 +251,19 @@ header {
 header h1 {
     border: none;
     display: inline-block;
-    font-size: 2em;
-    width: 45%;
+    font-size: 2.4em;
+    width: 48%;
+    padding-top: 2em;       /*Jen added*/
+
  }
+.holder{                  /*Jen added and also added to html*/
+    display: flex;
+    flex-direction: row;
+}
 #hamb {                                                       /* ------ 5. ID Selector ------- */
     font-size: 12px;
     color:#107099;
+    margin-left: 1.2em;    /*Jen added*/
 }
 
 /*----Hamburger Menu----*/
@@ -272,7 +290,7 @@ main {                             /* for mobile first */
 .container{
     max-width: 1280px;
     margin: auto;
-    width1: 80%;
+    width1: 80%;                                        /*DELETE?*/
 }
 
 /********************************************************
@@ -283,6 +301,8 @@ footer {
     background-blend-mode: lighten;
     display: grid;
     margin-top: 1.8em;
+    padding: .5em 1em; /*JEN ADDED*/
+ 
 }
 footer p { font-size: 1.4em; }
 footer input {
@@ -385,7 +405,7 @@ legend {
     .page {                               /* pertinent to LOCATIONS NEED TO FIND GRID NAMES*/
     display: grid;
     grid-gap: 10px;
-   grid-template-areas:
+    grid-template-areas:
        "hlj hsb"
        "plj psb"
        "dlj dsb"

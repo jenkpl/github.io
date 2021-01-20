@@ -286,6 +286,9 @@ main {                             /* for mobile first */
     margin: 2em auto;
     width: 90%;
 }
+.code{
+    font-family: "Courier New", monospace;
+}
 
 /********************************************************
     6. GENERIC SELECTORS (SHARED PAGE CLASS STYLES) 

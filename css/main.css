@@ -256,15 +256,12 @@ header h1 {
     font-size: 2.4em;
     width: 48%;
     padding-top: 2em;       /*Jen added*/
-    text-align: center;
 
  }
-/*
-.holder{                  Jen added and also added to html
+.holder{                  /*Jen added and also added to html*/
     display: flex;
     flex-direction: row;
 }
-*/
 #hamb {                                                       /* ------ 5. ID Selector ------- */
     font-size: 16px;
     color:#107099;
@@ -424,32 +421,6 @@ legend {
     .page ul{
         list-style-type: none;
 }
-    #hlj{
-    grid-area: hlj;
-}
-    #hsb{
-    grid-area: hsb;
-}
-    .piclj{
-    grid-area: plj;
-}
-    .picsb{
-    grid-area: psb;
-}
-    .dlj{
-    grid-area: dlj;
-}
-    .dsb{
-    grid-area: dsb;
-}
-    .mlj{
-    grid-area: mlj;
-}
-    .msb{
-    grid-area: msb;
-}
-
-
 /********************************************************
     11. ABOUT
 ********************************************************/

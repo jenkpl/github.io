@@ -421,6 +421,32 @@ legend {
     .page ul{
         list-style-type: none;
 }
+    #hlj{
+    grid-area: hlj;
+}
+    #hsb{
+    grid-area: hsb;
+}
+    .piclj{
+    grid-area: plj;
+}
+    .picsb{
+    grid-area: psb;
+}
+    .dlj{
+    grid-area: dlj;
+}
+    .dsb{
+    grid-area: dsb;
+}
+    .mlj{
+    grid-area: mlj;
+}
+    .msb{
+    grid-area: msb;
+}
+
+
 /********************************************************
     11. ABOUT
 ********************************************************/

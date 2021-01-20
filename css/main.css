@@ -212,7 +212,7 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
 .topshop input{
     border-radius: 3px;
     color: #4f4f4f;
-    font-size: 1.2rem; /*Jen added*/
+    font-size: 1.6rem; /*Jen added*/
     margin: 4px 5px;  /*Jen added*/
 }
 input#showSearch, input#srch{
@@ -261,7 +261,7 @@ header h1 {
     flex-direction: row;
 }
 #hamb {                                                       /* ------ 5. ID Selector ------- */
-    font-size: 12px;
+    font-size: 16px;
     color:#107099;
     margin-left: 1.2em;    /*Jen added*/
 }

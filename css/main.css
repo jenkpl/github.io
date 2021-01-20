@@ -289,6 +289,28 @@ main {                             /* for mobile first */
 .code{
     font-family: "Courier New", monospace;
 }
+.square{
+    color:#fff;
+    height: 80px;
+    width: 80px;
+    margin:5px;
+    display: inline-block;
+}
+.sq1{
+    background-color: #107099;
+}
+.sq2{
+    background-color: #cd5528;
+}
+.sq3{
+    background-color: #ffdd7b;
+}
+.sq4{
+    background-color: #96b5d3;
+}
+.sq5{
+    background-color: #c1d9e3;
+}
 
 /********************************************************
     6. GENERIC SELECTORS (SHARED PAGE CLASS STYLES) 

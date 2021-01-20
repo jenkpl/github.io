@@ -335,7 +335,13 @@ footer {
     display: grid;
     margin-top: 1.8em;
     padding: .5em 1em; /*JEN ADDED*/
+    justify-items: center; /*JEN ADDED*/
  
+}
+footer a{
+        font-size: 1.4em;      /*JEN ADDED*/
+        padding: .5em 0; 
+       
 }
 footer p { font-size: 1.4em; }
 footer input {
@@ -414,9 +420,11 @@ legend {
         grid-template-columns: repeat(7, 1fr);   
         justify-items: center;
      } 
+/*
     footer a{
-        font-size: 1.4em;      /*JEN ADDED*/
+        font-size: 1.4em;      JEN ADDED
     }
+*/
     footer p { font-size: 1em; }
     footer input {
         font-size: 1.4em;

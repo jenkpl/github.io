@@ -225,8 +225,9 @@ input#showSearch, input#srch{
 .topshop span {
     color:#107099;
     display: inline-block;
-    font-size: 14px;
-    padding: 5px;  /*Jen added*/
+    font-size: 1.6rem;/*Jen added*/
+    padding: .9rem;/*Jen added*/
+    
 }
 .shop li { display: inline-block; }                            
 nav ul li {

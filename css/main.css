@@ -203,7 +203,7 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
 /*-----top shopping bar-----*/
 .topshop {                
     width: 100%;/*JEN ADDed*/
-    background-color: #ffdd7b;   
+    background-color: #96B5D3;   
     position: fixed;/*JEN ADDED POSITION FIXED*/
     display: flex;
     font-size: 12px;
@@ -246,6 +246,7 @@ nav ul li:hover { background-color: #ffdd7b; }
 /*-----header and nav------*/
 header {
     background: rgba(255,255,255,.5) url(../images/headOpt.jpg) no-repeat;
+    background-size: auto;
     background-blend-mode: lighten;
     display: flex;
     flex-direction:column;

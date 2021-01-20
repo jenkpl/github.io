@@ -203,7 +203,7 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
 /*-----top shopping bar-----*/
 .topshop {                
     width: 100%;/*JEN ADDed*/
-    background-color: #96B5D3;   
+    background-color: #ffdd7b ;   
     position: fixed;/*JEN ADDED POSITION FIXED*/
     display: flex;
     font-size: 12px;
@@ -318,6 +318,7 @@ footer input {
     text-align: center;
 }
 .bottom {
+    width: 100%;
     background-color: #96B5D3;
     color: #fff;
     text-align: center;

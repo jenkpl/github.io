@@ -184,7 +184,7 @@ p {
     margin-bottom: .7em;
 }
 img{
-    margin: auto;
+    height: auto;
     max-width: 100%;
 }
 a {
@@ -417,4 +417,19 @@ legend {
 ********************************************************/
     .page ul{
         list-style-type: none;
+}
+/********************************************************
+    11. ABOUT
+********************************************************/
+#staffButton h3{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: #fff;
+}
+#staffButton{
+    padding: 5px;
+    background-color:#107099;
+    border:2px solid #b7ddda;  
+    border-radius: 15px;
+    display: inline-block;
 }

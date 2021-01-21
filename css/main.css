@@ -216,7 +216,7 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
     margin: 4px 5px;/*Jen added*/
     padding: .9rem;/*Jen added*/
 }
-input#showSearch, input#srch{
+input#showSearch, input#srch, input#sm{   /*input#sm rule 1-20 ADDED BY JEN*/
     display: none;
 }
 #showSearch:checked + input#srch{
@@ -230,7 +230,16 @@ input#showSearch, input#srch{
     padding: 5px; 
     
 }
-.shop li { display: inline-block; }                            
+.shop li { display: inline-block; }                       ul.shopMenu{                     /*1-20 ADDED BY JEN*/
+    display: none;
+}    
+.shopMenu li{
+    background-color: #96b5d3;
+    border-top: solid 1px #cd5528 ;
+}
+#sm:checked + .shopMenu{
+    display: block;           /*1-20 ADDED BY JEN*/
+}
 nav ul li {
     display: block;
     text-align: center;
@@ -244,13 +253,15 @@ nav ul li:hover { background-color: #ffdd7b; }
     width: 30%;
 }
 /*-----header and nav------*/
+
 header {
     background: rgba(255,255,255,.5) url(../images/headOpt.jpg) no-repeat;
-    background-size: auto;
+    background-size: cover;    /*Jen added*/
     background-blend-mode: lighten;
     display: flex;
     flex-direction:column;
 }
+
 header h1 {
     border: none;
     display: inline-block;
@@ -321,7 +332,7 @@ main {                             /* for mobile first */
     6. GENERIC SELECTORS (SHARED PAGE CLASS STYLES) 
 ********************************************************/
 .container{
-    max-width: 1280px;
+/*    max-width: 1280px;*/   /*1-20 JEN COMMENTED OUT*/
     margin: auto;
     width1: 80%;                                        /*DELETE?*/
 }
@@ -332,10 +343,12 @@ main {                             /* for mobile first */
 footer {
     background: rgba(255,255,255,.7) url(../images/footOpt.jpg) no-repeat;
     background-blend-mode: lighten;
+    background-size: cover;
     display: grid;
+    justify-items: center; /*JEN ADDED*/
     margin-top: 1.8em;
     padding: .5em 1em; /*JEN ADDED*/
-    justify-items: center; /*JEN ADDED*/
+    
  
 }
 footer a{
@@ -411,7 +424,7 @@ legend {
         color: #483d8b;
         display: flex;
         flex-direction: row;
-        justify-content: center;  
+        justify-content: space-evenly;  /*1-20JEN ADDED*/
      }
     footer {
         align-items: center;

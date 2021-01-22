@@ -471,7 +471,11 @@ legend {
        "plj psb"
        "dlj dsb"
        "mlj msb";
-}
+    }
+/*                       1-21 JEN ADDED*/
+    .surfCard{
+            grid-template-columns: 1fr 2fr 1fr;
+    }
 }
 /********************************************************
     10. LOCATIONS
@@ -519,4 +523,53 @@ legend {
     border:2px solid #b7ddda;  
     border-radius: 15px;
     display: inline-block;
+}
+/********************************************************
+    11. SURF
+********************************************************/
+/*
+.breaks{
+    display: flex;
+}
+*/
+#surfButton{
+    padding: 5px;
+    background-color:#107099;
+    border:2px solid #b7ddda;  
+    border-radius: 15px;
+    display: inline-block;
+    margin: auto;
+}
+#surfButton h3{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: #fff;
+}
+.surfCard{
+    display: grid;
+/*    grid-template-columns: 1fr 2fr 1fr;*/
+    border-bottom: solid 1px #c1d9e3;
+    padding: 10px 0;
+}
+.surfText{
+    padding: 1em;
+}
+.surfText h2{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: #107099;
+}
+/*
+.surfWrap{
+    display: grid;
+    grid-gap: 10px;
+   
+    
+}
+*/
+.surfPic{    
+    border: 1px solid darkgrey;
+    background-color: white;
+    padding: 15px 15px 60px 15px;
+    box-shadow: 5px 10px 10px darkgrey;
 }

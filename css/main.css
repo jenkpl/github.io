@@ -1275,7 +1275,7 @@ input.checkOut:hover {
 /********************************************************
     16. RENTALS    ADDED 1-22 BY JEN 
 ********************************************************/
-#rentButton{
+.rentButton{
     padding: 5px;
     background-color:#107099;
     border:2px solid #b7ddda;  
@@ -1284,7 +1284,7 @@ input.checkOut:hover {
 /*    margin: auto;*/
     text-align: center;
 }
-#rentButton h3{
+.rentButton h3{
     font-family: 'Amatic SC', cursive;
     font-weight: 700;
     color: #fff;

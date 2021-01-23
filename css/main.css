@@ -479,7 +479,7 @@ legend {
             grid-template-columns: 1fr 2fr 1fr;
     }
 }
-.rentWrap{
+.rentWrap{                   /*JEN NEW*/
     flex-direction: row;
     justify-content: space-around;
 }
@@ -1275,13 +1275,47 @@ input.checkOut:hover {
 /********************************************************
     16. RENTALS    ADDED 1-22 BY JEN 
 ********************************************************/
-.rentPic{
+#rentButton{
+    padding: 5px;
+    background-color:#107099;
+    border:2px solid #b7ddda;  
+    border-radius: 15px;
+    display: inline-block;
+/*    margin: auto;*/
+    text-align: center;
+}
+#rentButton h3{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: #fff;
+}
+.rentPic{      /*JEN NEW*/
     width: 200px;
     height: auto;
    margin: 7.5px;
 }
-.rentWrap{
+.rentTwo ul{
+    list-style-type: none;
+}
+.rentWrap{    /*JEN NEW*/
     display: flex;
     flex-direction: column;
+/*    align-items: center;*/
 }
-
+.SBrent ul.listSB{
+    display: none;
+}
+@media screen and (min-width:550px){
+    .rentTwo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .rentWrap{
+    flex-direction: row;
+    }
+    .SBrent ul.listSB{
+        display: block;
+    }
+   
+}

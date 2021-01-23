@@ -488,7 +488,7 @@ legend {
                 10. LOCATIONS PAGE
 ********************************************************/
     .page ul{ list-style-type: none; }
-    .page ul li{
+    .page ul li{           /*1-23 JEN ADDED*/
     font-size: 1.4em;
     padding: .25rem 0;
 }
@@ -1302,7 +1302,7 @@ input.checkOut:hover {
 .rentTwo ul{
     list-style-type: none;
 }
-.rentTwo ul li{
+.rentTwo ul li{  /*1-23JEN ADDED*/
     font-size: 1.4em;
     padding: .25rem 0;
 }

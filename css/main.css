@@ -488,6 +488,10 @@ legend {
                 10. LOCATIONS PAGE
 ********************************************************/
     .page ul{ list-style-type: none; }
+    .page ul li{
+    font-size: 1.4em;
+    padding: .25rem 0;
+}
 
    #hlj{
     grid-area: hlj;
@@ -1222,10 +1226,11 @@ input.checkOut:hover {
 /********************************************************
     14. ABOUT
 ********************************************************/
-#staffButton h3{
+#staffButton a{
     font-family: 'Amatic SC', cursive;
     font-weight: 700;
     color: #fff;
+    
 }
 #staffButton{
     padding: 5px;
@@ -1296,6 +1301,10 @@ input.checkOut:hover {
 }
 .rentTwo ul{
     list-style-type: none;
+}
+.rentTwo ul li{
+    font-size: 1.4em;
+    padding: .25rem 0;
 }
 .rentWrap{    /*JEN NEW*/
     display: flex;

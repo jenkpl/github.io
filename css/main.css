@@ -479,6 +479,10 @@ legend {
             grid-template-columns: 1fr 2fr 1fr;
     }
 }
+.rentWrap{
+    flex-direction: row;
+    justify-content: space-around;
+}
 
 /********************************************************
                 10. LOCATIONS PAGE
@@ -1240,7 +1244,8 @@ input.checkOut:hover {
     border:2px solid #b7ddda;  
     border-radius: 15px;
     display: inline-block;
-    margin: auto;
+/*    margin: auto;*/
+    text-align: center;
 }
 #surfButton h3{
     font-family: 'Amatic SC', cursive;
@@ -1267,5 +1272,16 @@ input.checkOut:hover {
     font-weight: 700;
     color: #107099;
 }
-
+/********************************************************
+    16. RENTALS    ADDED 1-22 BY JEN 
+********************************************************/
+.rentPic{
+    width: 200px;
+    height: auto;
+   margin: 7.5px;
+}
+.rentWrap{
+    display: flex;
+    flex-direction: column;
+}
 

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+    <html lang="en">
+         <head>
+             <meta charset="utf-8" />
+             <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+             <!--[if lt IE 9]>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
+             </script>
+            <![endif]-->
+             <meta name =”description” content="Mitch's Surf Shop offers California's most innovative hand shaped surfboards in its two stores located in La Jolla Shores and Solana Beach. The surf shop sells broad range of shortboards, longboards, mid length surfboards, surf and dive gear, blank and resin shaping supplies, surfboard fins, surfing and skating clothing and stand up paddleboarding supplies. The store also offers surfboards, wetsuits, fins, snorkels, masks, boogie boards and sups with paddles for rent. " /> 
+             <meta name="keywords" content="Mitch's, surf shop, surf rental, San Diego, La Jolla, Solana Beach, surfboard, longboard, shortboard, surf gear, wetsuits, snorkelling, surfboard shaping, takayama, sups, dive gear, christenson" >
+             <meta name="author" content="Burkley Hoang, Jennifer Kim, Polina Kochetkova" >
+             <title>Hunter Seeker 9'6" Deep Red - Mandala</title>
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+             <link rel="preconnect" href="https://fonts.gstatic.com">
+             <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+             <link href="../css/main.css" type="text/css" rel="stylesheet" >
+             <link href="../css/category.css" rel="stylesheet" type="text/css" />
+         </head>
+         
+        <body>
+        <div class="container">
+        
+        <nav class="topshop">
+      
+            <div class="search">
+                <label for="showSearch" class="showSearch"><span class="fas fa-search" aria-hidden="true"></span></label>
+                <input type="checkbox" id="showSearch" role="button">
+                   <input id="srch" type="text" value="search"></div>
+
+                 <div class="shop">
+                <ul>
+                <li><a href="#">log in</a></li>
+                <li><a href="#">create account</a></li>
+                <li><span class="fas fa-shopping-cart"></span></li>
+                </ul>
+                </div>
+            </nav>
+            
+            <header>
+               
+                <div class="holder">
+                    <a href="../index.html">
+                        <img class="logoTop" src="../images/logoMitch.gif" alt="logo"></a>
+                    <h1>San Diego's Original Surf Shop - since 1967!</h1>
+                </div>
+                
+            <label for="showMenu" class="showMenu">
+           <span id="hamb" class="fas fa-bars" aria-hidden="true"></span></label>
+           <input type="checkbox" id="showMenu" role="button">
+                
+            <nav class="mainnav">
+                <ul>
+                    <li>
+                    <a href="#">Shop</a>
+                    </li>
+                    <li>
+                    <a href="#">Rentals</a>
+                    </li>
+                    <li>
+                    <a href="#">Blog</a>
+                    </li>
+                    <li>
+                    <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                    <a href="locations.html">Locations</a>
+                    </li>
+                    <li>
+                    <a href="#">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+            </header>
+    <!---------------------------------------------Category Page content ---------------------------------> 
+          <main>
+             
+             <p class="crumb"><a href="../index.html">Home</a> &gt;<a href="#">Shop</a> &gt; <a href="#">Surfboards</a> </p>
+             
+              <h1>Surfboards</h1>
+              
+              <section id="categoriesSm">
+              
+              <!-- Slideshow container -->
+<div class="categoriesContainer">
+
+   <div class="slideCat fade">
+    <a href="#"><img src="../images/medBO.jpg"></a>
+    <div class="capt"><a href="#">Boards by Size</a></div>
+  </div>
+
+  <div class="slideCat fade">
+    <a href="#"><img src="../images/retroBO.jpg"></a>
+    <div class="capt"><a href="#">Retro</a></div>
+  </div>
+
+  <div class="slideCat fade">
+     <a href="#"><img src="../images/eggBO.jpg"></a>
+    <div class="capt"><a href="#">Egg</a></div>
+  </div>  
+    
+    <div class="slideCat fade">
+     <a href="#"><img src="../images/brandBO.jpg"></a>
+    <div class="capt"><a href="#">Brands</a></div>
+  </div>
+  
+      <div class="slideCat fade">
+     <a href="#"><img src="../images/collectBO.jpg"></a>
+    <div class="capt"><a href="#">Collectible</a></div>
+  </div>
+  
+    <div class="slideCat fade">
+    <a href="#"><img src="../images/fishBO.jpg"></a>
+    <div class="capt"><a href="#">Fish</a></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+ <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideCat");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script> 
+   </section> <!-- end categoriesSm ----------->
+            
+             <section id="categoriesL">
+                 <figure>
+                     <a href="#"><img src="../images/medBO.jpg" alt=""></a>
+                     <figcaption class="categoryName"><a href="#">Boards by size</a></figcaption>
+                 </figure>
+                 <figure>
+                     <a href="#"><img src="../images/retroBO.jpg" alt=""></a>
+                     <figcaption class="categoryName"><a href="#">Retro</a></figcaption>
+                 </figure>
+                 <figure>
+                     <a href="#"><img src="../images/eggBO.jpg" alt=""></a>
+                     <figcaption class="categoryName"><a href="#">Egg</a></figcaption>
+                 </figure>
+                 <figure>
+                     <a href="#"><img src="../images/brandBO.jpg" alt=""></a>
+                     <figcaption class="categoryName"><a href="#">Brands</a></figcaption>
+                 </figure>
+                 <figure>
+                     <a href="#"><img src="../images/collectBO.jpg" alt=""></a>
+                     <figcaption class="categoryName"><a href="#">Collectible</a></figcaption>
+                 </figure>
+                 <figure>
+                     <a href="#"><img src="../images/fishBO.jpg" alt=""></a>
+                     <figcaption class="categoryName"><a href="#">Fish</a></figcaption>
+                 </figure>
+             </section>
+                              
+              <div id="wrapper">
+                   
+                   <section id="productTile">
+                    
+                    <figure><a href="../pages/product.html"><img src="../images/bigBOpt.jpg" alt="" ></a>
+                      <figcaption>
+                      <ul>
+                          <li><a href="../pages/product.html">Hunter Seeker 9'6" Deep Red</a></li>
+                          <li><a href="#">Mandala</a></li>
+                          <li>&#36;1,665.00</li>
+                      </ul>
+                              </figcaption>
+                      </figure>
+                       
+                        <figure><a href="../pages/product.html"><img src="../images/tile2O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">Flat Tracker 2.0 6' 10" Lime</a></li>
+                          <li><a href="#">Christenson</a></li>
+                          <li>&#36;1,220.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                    
+                     <figure><a href="../pages/product.html"><img src="../images/tile3O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">Scorpion 7' 2" Aqua</a></li>
+                          <li><a href="#">Takayama</a></li>
+                          <li>&#36;1,325.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                     
+                     <figure><a href="../pages/product.html"><img src="../images/tile4O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">Scorpion 7' 4" Deep Blue</a></li>
+                          <li><a href="#">Takayama</a></li>
+                          <li>&#36;1,325.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                      
+                      <figure><a href="../pages/product.html"><img src="../images/tile5O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">C-Bucket 7' White Green</a></li>
+                          <li><a href="#">Christenson</a></li>
+                          <li>&#36;1,295.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                    
+                    <figure><a href="../pages/product.html"><img src="../images/tile6O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">Water Hog</a></li>
+                          <li><a href="#">Channel Islands</a></li>
+                          <li>&#36;781.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                  
+                       <figure><a href="../pages/product.html"><img src="../images/tile7O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">RP Downrailer 7' 4" Red</a></li>
+                          <li><a href="#">Tudor</a></li>
+                          <li>&#36;1,140.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                    
+                    <figure><a href="../pages/product.html"><img src="../images/tile8O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">Personal 9' 8" Warm Sand</a></li>
+                          <li><a href="#">Tudor</a></li>
+                          <li>&#36;1,506.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                  
+                    <figure><a href="../pages/product.html"><img src="../images/tile9O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">RP Stubbie 7' 2" Clear</a></li>
+                          <li><a href="#">Mandala</a></li>
+                          <li>&#36;1,060.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                  
+                    <figure><a href="../pages/product.html"><img src="../images/tile10O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">Superchunk 5' 7" Clear</a></li>
+                          <li><a href="#">Mandala</a></li>
+                          <li>&#36;860.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                               
+                  
+                    <figure><a href="../pages/product.html"><img src="../images/tile11O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">Tommy Witt 9' 4" Hot Red</a></li>
+                          <li><a href="#">Takayama</a></li>
+                          <li>&#36;1,495.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                    
+                    <figure><a href="../pages/product.html"><img src="../images/tile12O.jpg" alt="" ></a>
+                        <figcaption>
+                      <ul>
+                          <li><a href="#">Scorpion 7' 8" Ice Blue</a></li>
+                          <li><a href="#">Takayama</a></li>
+                          <li>&#36;1,315.00</li>
+                      </ul>
+                              </figcaption>
+                    </figure>
+                    
+                   </section> <!-- end productTile ------------>
+                   
+                   <aside id="quickLinks">
+                     
+                    <h3>What's new</h3>
+                      <ul>
+                            <li><a href="../pages/product.html">Hunter Seeker 9'6" deep red, Mandala</a></li>
+                           <li><a href="#">C-Bucket 7' abstract, Christenson</a></li>
+                           <li><a href="#">C-Bucket 7' 2" cool sage, Christenson</a></li>
+                           <li><a href="#">Fin coasters, Obayashi</a></li>
+                      </ul>
+                      
+                      <h3>Featured Products</h3>
+                      <ul>
+                           <li><a href="#">Huntsman 7' mustard, Christenson</a></li>
+                           <li><a href="#">Flat tracker 2.0 7' 2" hot orange, Christenson</a></li>
+                           <li><a href="#">Black sherpa hoodie, Mitch's Surf Shop</a></li>
+                           <li><a href="#">Justin quintail 10", RFC</a></li>
+                      </ul>
+                      
+                      <h3><a href="#">Gift Cards</a></h3>
+                             
+                  </aside> <!-- end .quickLinks -->
+                  </div>   <!-- end wrapper -->
+              
+               
+               <div class="pagination">
+                      <a href="#">&#10094;</a>
+                      <a class="active" href="#">1</a>
+                      <a href="../pages/category.html">2</a>
+                      <a href="#">&#10095;</a>
+               </div>   <!-- end Pagination -->
+               
+             
+          </main>
+          
+          
+          
+          
+          
+          
+          
+           <!--------------------------------------------- End Category Page content --------------------------------->        
+            <footer>
+           
+                     <div class="F2"><a href="#">contact us</a></div>
+                     <div class="F3"><a href="#">careers</a></div>
+                     <div class="F4"><a href="#">surf report</a></div>
+                     <div class="F5"><a href="#">faq</a></div>
+                     <div class="F6"><a href="#">newsletter</a><p>Subscribe to be the first to hear about exclusive offers and new arrivals:</p></div>
+                     <div class="F7"><a href="#">social media</a></div>
+                     <div class="news"><label for="sign"><input name="signup" type="text" value="name@email.com" id="sign"></label></div>
+                <div class="icons">
+                    <a href="https://www.facebook.com/Mitchs-Surf-Shop-358189128837/?ref=ts"><span class="fab fa-facebook-square"></span></a>
+                    <a href="https://www.instagram.com/mitchssurfshop/"><span class="fab fa-instagram-square"></span></a>
+                    <a href="#"><span class="fab fa-youtube"></span></a>
+                </div>
+            
+           
+            
+            </footer>
+            <div class="bottom">&copy;Copyright 2021 | MITCH'S SURF SHOP |<a href="#"> Privacy Policy</a></div>
+           
+             
+              
+               
+    
+            </div>
+        </body>
+    </html>

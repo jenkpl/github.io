@@ -9,6 +9,14 @@
     6. Generic Selectors (shared page class styles)
     7. Footer Content
     8. Forms and comments
+    9. Media Queries
+    10. Locations
+    11. Contact Us
+    12. Category
+    13. Product
+    14. About
+    15. Surf
+    
 *************************************************************************/
 
 /********************************************************
@@ -18,7 +26,7 @@
 Author: Burkley Hoang, Jennifer Kim, Polina Kochetkova
 Project: Mitch's Surf Shop Website
 Ver: 1.0
-Last Updated: 1/17/2021
+Last Updated: 1/22/2021
 Notes:
 ---------------------------------------------
                         COLOR GUIDE
@@ -35,10 +43,12 @@ headings h1 - 'Amatic SC'
 headings h2, h3, h4 - 'Nunito Sans'
 body - 'Nunito Sans'
 ********************************************************* */
+
 /********************************************************
     2. CSS RESET (! normalize.css v8.0.1, modified)
 ********************************************************* */
 /* MIT License | github.com/necolas/normalize.css */
+
 aside, article, section, header, footer, figure, figcaption, nav, video, audio, main {
     display: block
 }
@@ -73,11 +83,11 @@ textarea {
   margin: 0; 
 }
 button,
-input { /* 1 */
+input { 
   overflow: visible;
 }
 button,
-select { /* 1 */
+select {
   text-transform: none;
 }
 button,
@@ -167,7 +177,7 @@ h1 {
     margin: .5em 0 1em;
     padding-bottom: 8px;
     text-align: center;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
 }
 h2, h3, p { color: #4f4f4f; }                  /* ------ 2. Group selector ------- */
 h2 {
@@ -201,38 +211,64 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
     4. HEADER AND NAV 
 ********************************************************/
 /*-----top shopping bar-----*/
-.topshop {                
-    width: 100%;/*JEN ADDed*/
-    background-color: #96B5D3;   
-    position: fixed;/*JEN ADDED POSITION FIXED*/
+.topshop {                                   
+    background-color: #96B5D3;
     display: flex;
-    font-size: 12px;
+    font-size: 11px;
     justify-content: space-between;
+    position:fixed;
+    width:100%;
 }
 .topshop input{
     border-radius: 3px;
     color: #4f4f4f;
-    font-size: 1.6rem; /*Jen added*/
-    margin: 4px 5px;/*Jen added*/
-    padding: .9rem;/*Jen added*/
-}
-input#showSearch, input#srch, input#sm{   /*input#sm rule 1-20 ADDED BY JEN*/
-    display: none;
-}
-#showSearch:checked + input#srch{
-    display: inline-block}
+    font-size: 1.6rem;
+    margin: 4px 5px;
+    padding: .9rem;
 }
 .topshop ul { list-style-type: none; }                      /* ------ 3. Descendant Selector (contextual selector) ------- */
 .topshop span {
     color:#107099;
     display: inline-block;
     font-size: 14px;
-    padding: 5px; 
-    
+    padding: 5px;
 }
-.shop li { display: inline-block; }                       ul.shopMenu{                     /*1-20 ADDED BY JEN*/
-    display: none;
-}    
+.shop li { display: inline-block; }                           
+nav ul li {
+    display: block;
+    font-size: 1.3em;
+    text-align: center;
+}
+nav ul li:hover { background-color: #ffdd7b; }
+
+input#showSearch, input#srch, input#sm { display: none; }
+#showSearch:checked + input#srch {display: inline-block}
+
+
+/*-----header and nav------*/
+header {
+    background: rgba(255,255,255,.5) url(../images/headOpt.jpg) no-repeat;
+    background-blend-mode: lighten;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.logoTop {
+    display: inline-block;
+    margin-top: 15%;
+    width: 30%;
+}
+header h1 {
+    border: none;
+    display: inline-block;
+    font-size: 2em;
+    padding-top: 2em;
+    width: 45%;
+ }
+.holder{                        
+    display: flex;
+    flex-direction: row;
+}
 .shopMenu li{
     background-color: #96b5d3;
     border-top: solid 1px #cd5528 ;
@@ -240,44 +276,13 @@ input#showSearch, input#srch, input#sm{   /*input#sm rule 1-20 ADDED BY JEN*/
 #sm:checked + .shopMenu{
     display: block;           /*1-20 ADDED BY JEN*/
 }
-nav ul li {
-    display: block;
-    text-align: center;
-    font-size: 1.3em;            /*ADDED BY JEN*/
-    
-}
-nav ul li:hover { background-color: #ffdd7b; }
-.logoTop {
-    margin-top: 15%;
-    display: inline-block;
-    width: 30%;
-}
-/*-----header and nav------*/
+ul.shopMenu{                     /*1-20 ADDED BY JEN*/
+    display: none;}
 
-header {
-    background: rgba(255,255,255,.5) url(../images/headOpt.jpg) no-repeat;
-    background-size: cover;    /*Jen added*/
-    background-blend-mode: lighten;
-    display: flex;
-    flex-direction:column;
-}
-
-header h1 {
-    border: none;
-    display: inline-block;
-    font-size: 2.4em;
-    width: 48%;
-    padding-top: 2em;       /*Jen added*/
-
- }
-.holder{                  /*Jen added and also added to html*/
-    display: flex;
-    flex-direction: row;
-}
 #hamb {                                                       /* ------ 5. ID Selector ------- */
     font-size: 16px;
     color:#107099;
-    margin-left: 1.2em;    /*Jen added*/
+    margin-left: 1.2em;
 }
 
 /*----Hamburger Menu----*/
@@ -288,13 +293,17 @@ header h1 {
 input#showMenu { display: none; }
 #showMenu:checked + .mainnav { display: block; }
 /*-----breadcrumb (ALL PAGES BUT HOME)-----*/
-.crumb { font: 1.1em 'Nunito Sans', sans-serif; }
+.crumb { 
+    font: 700 1.1em 'Nunito Sans', sans-serif; 
+    text-transform: uppercase;
+    display: none;
+}
 
 /********************************************************
     5. MAIN BODY CONTENT 
 ********************************************************/
 main {                             /* for mobile first */
-    margin: 2em auto;
+    margin: 1em auto 5em;
     width: 90%;
 }
 /*rules for style guide styling*/
@@ -328,13 +337,14 @@ main {                             /* for mobile first */
     background-color: #4f4f4f;
 }
 
+
+
 /********************************************************
     6. GENERIC SELECTORS (SHARED PAGE CLASS STYLES) 
 ********************************************************/
 .container{
-/*    max-width: 1280px;*/   /*1-20 JEN COMMENTED OUT*/
+/*    max-width: 1280px;*/
     margin: auto;
-    width1: 80%;                                        /*DELETE?*/
 }
 
 /********************************************************
@@ -343,19 +353,16 @@ main {                             /* for mobile first */
 footer {
     background: rgba(255,255,255,.7) url(../images/footOpt.jpg) no-repeat;
     background-blend-mode: lighten;
-    background-size: cover;
     display: grid;
-    justify-items: center; /*JEN ADDED*/
+    justify-items: center;
     margin-top: 1.8em;
-    padding: .5em 1em; /*JEN ADDED*/
-    
- 
+    padding: .5em 1em;
 }
 footer a{
-        font-size: 1.4em;      /*JEN ADDED*/
-        padding: .5em 0; 
-       
+    font-size: 1.4em;      /*JEN ADDED*/
+    padding: .5em 0;      
 }
+
 footer p { font-size: 1.4em; }
 footer input {
     border-radius: 3px;
@@ -363,16 +370,15 @@ footer input {
     font-size: 1.6rem;
     padding: .9rem;
 }
-
 .F7 { display: none; }
+.bottom {
+    background-color: #96b5d3;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
 .icons {
     font-size: 1.5em;
-    text-align: center;
-}
-.bottom {
-    width: 100%;
-    background-color: #96B5D3;
-    color: #fff;
     text-align: center;
 }
 
@@ -413,18 +419,18 @@ legend {
     9. MEDIA QUERIES 
 ********************************************************/
 /*med-screen/TABLET*/
-@media screen and (min-width:550px){
+@media screen and (min-width:550px) {
    nav ul li{
         display: inline-block;
+        margin: 0 10px;
         padding: 5px;
-        margin: 0 10px;                        /*JEN ADDED pushing nav buttons apart*/
     }
     #hamb { display: none; }
     .mainnav {
         color: #483d8b;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;  /*1-20JEN ADDED*/
+        justify-content: center;
      }
     footer {
         align-items: center;
@@ -433,29 +439,26 @@ legend {
         grid-template-columns: repeat(7, 1fr);   
         justify-items: center;
      } 
-/*
-    footer a{
-        font-size: 1.4em;      JEN ADDED
-    }
-*/
     footer p { font-size: 1em; }
     footer input {
         font-size: 1.4em;
         padding: .9rem;
     }
+    .crumb{
+        display: block;
+    }
     .icons {
         font-size: 2em;
 /*
-        grid-column: -1;     /*JEN COMMENTED OUT*/
-/*        grid-row: 1;*/
+        grid-column: -1;     JEN COMMENTED OUT
+        grid-row: 2;
 */
         text-align: center;
     }
     .news{
-        grid-row: 2;          /*JEN CHANGED*/
+        grid-row: 2;
         grid-column: 6;
      }
-
     
     .F2, .F3, .F4, .F5, .F6, .F7 {
         align-self: start;
@@ -463,7 +466,7 @@ legend {
      }
     .F2{ grid-column-start: 2; }
     
-    .page {                               
+     .page {                               
     display: grid;
     grid-gap: 10px;
     grid-template-areas:
@@ -472,18 +475,17 @@ legend {
        "dlj dsb"
        "mlj msb";
     }
-/*                       1-21 JEN ADDED*/
     .surfCard{
             grid-template-columns: 1fr 2fr 1fr;
     }
 }
+
 /********************************************************
-    10. LOCATIONS
+                10. LOCATIONS PAGE
 ********************************************************/
-    .page ul{
-        list-style-type: none;
-}
-    #hlj{
+    .page ul{ list-style-type: none; }
+
+   #hlj{
     grid-area: hlj;
 }
     #hsb{
@@ -508,9 +510,713 @@ legend {
     grid-area: msb;
 }
 
-
 /********************************************************
-    11. ABOUT
+               11. CONTACT US PAGE
+********************************************************/
+
+#contactUs a {                                                /* decide on it later */
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+a[href="mailto:mitchsorders@gmail.com"] {                            /***------- 7. Attribute Selector-------- ***/
+    display: block;
+}
+
+
+/********************** FORM ***********/
+
+#contact1 fieldset {
+    border: solid 1px #fff;
+    margin: 3.5em 0 8em;
+    min-width: 200px;
+}
+#contact1 input {
+    padding: 1.4em;
+    border: solid 1px #4f4f4f; 
+}
+#contact1 input[type="text"], input[type="email"], input[type="tel"] { width: 100%; }
+#contact1 legend {
+    color: #107099;
+    font-size: 2.6em;
+    text-align: center;
+}
+#contact1 input[type="submit"] { 
+    background-color: #3f9cc4;                                        /*** --- fallback --- ***/
+    background-image: linear-gradient(180deg, #107099, #0fc0e7);
+    border: solid 4px #fff;
+    border-radius: 25px;
+    color: #fff;
+    font: 700 1.5em 'Nunito Sans', sans-serif;
+    margin-top: 1.2em;
+    opacity: .7;
+    padding: .75em 1em;
+    text-transform: uppercase;
+    width: 100%;
+}
+#contact1 input[type="submit"]:hover {
+    border-color: #dbf5ff;                               /* choose one and remove the rest*/
+    border-color: #FFDD7B;
+    border-color: #B7DDDA;
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+}
+#contact1 label {
+    color: #4f4f4f;
+    display: block;
+    font-size: 1.3em;
+    margin: .9em 0 .4em;
+    text-transform: uppercase;
+}
+#contact1 textarea {
+    border: solid 1px #4f4f4f;
+    min-height: 12em;
+    overflow: auto;
+    padding: .75em;
+    width: 100%;
+}
+
+@media screen and (min-width: 507px) {
+   a[href="mailto:mitchsorders@gmail.com"] { display: inline; }
+    #contactUs {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+   #contact1 fieldset {
+        margin: 4em auto 8em;
+        min-width: 390px;
+        max-width: 485px;
+        width: 90%;
+    }
+    #contact1 input[type="submit"] {
+        display: block;
+        margin: 1.2em auto 0;
+        padding: 0.7em;
+        width: 40%;
+    }
+}
+@media screen and (min-width: 665px) {                  /* check how main width affects the pages*/
+    main {
+        width1: 95%;
+    }
+    #contact1 input {
+        padding: 1em;
+    }
+} 
+/**********************END FORM*********************************/
+/********************************************************
+               12. CATEGORY PAGE
+********************************************************/
+/*Colors: #c1d9e3 light blue 
+ light beige: #dfc2a7;
+   light gold #e5ae5c;*/
+
+/*
+.crumb {
+    display: none;
+}
+*/
+.categoriesContainer {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+#categoriesSm {
+    border-bottom: solid 1px #c1d9e3;
+    margin-top: 7em;
+    padding-bottom: 5em;
+}
+/* Hide the images by default */
+.slideCat {
+  display: none;
+}
+.slideCat img {
+    width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 104%;
+  width: auto;
+  margin: -22px -17px 0;
+  padding: 16px;
+  color: #107099;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #107099;
+}
+
+/* Caption text */
+.capt a {
+  background-color: #dfc2a7;
+  opacity: .9;
+  color: #107099;
+  font-size: 25px;
+  font-family: 'Amatic Sc', cursive;
+  padding: 8px 12px;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: .7em 2px;
+  background-color: #107099;
+  opacity: .5;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #107099;
+    opacity: 1;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/************ end Slider ******************/
+#categoriesL {
+    display: none;
+}
+#productTile {
+    margin-top: 4.5em;
+    padding: 1.5em 1em 0;
+}
+#productTile li {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+#productTile ul {
+    list-style-type: none;
+    margin-bottom: 4.5em;
+}
+.pagination {
+    margin: 10rem 0 7rem;
+    text-align: center;
+    
+}
+
+.pagination a {
+    color: #000;
+    font-size: 1.1em;
+    padding: 8px 16px;
+    transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: #107099;
+  color: white;
+}
+#quickLinks {
+    display: none;
+}
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #c1d9e3;}
+
+@media screen and (min-width: 320px) {
+    .categoriesContainer {
+      max-width: 60%;
+  }
+   .dot {
+      margin: .8em 2px;
+}
+    #productTile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #productTile figure {
+        width: 47%;
+    }
+    #productTile li {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 557px) {
+    #categoriesSm {
+        display: none;
+    }
+    #categoriesL {
+        border-bottom: solid 1px #c1d9e3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1000px;
+        padding-bottom: 3em;
+    }
+    #categoriesL figure {
+        position: relative;
+        margin: 0 3% 2%;
+        flex-basis: 137px;
+
+    }
+
+    .categoryName a {
+       background-color: #107099;
+   opacity: .8;
+  color: #fff;
+  font-size: 2.5em;
+  font-family: 'Amatic Sc', cursive;
+  padding: 4px 0;
+ position: absolute;
+  top: 34%;
+  width: 100%;
+  text-align: center;
+    }
+        #productTile {
+        margin-top: 2em;
+        padding: 7em 0 0;
+    }
+    #productTile figure {
+        margin: 2%;
+        width: 28%;
+    }
+}
+@media screen and (min-width: 732px) {
+     .crumb {
+        display: block;
+        font-size: 1.4em;
+    }
+    #wrapper {
+        display: grid;
+        grid-gap: 3%;
+        grid-template-columns: 1fr 2fr;
+    }
+    #categoriesL {
+        flex-wrap: nowrap;
+        max-width: 100%;
+    }
+    #categoriesL figure {
+        margin: 0 1%;
+    }
+    .categoryName a {
+        font-size: 3em;
+    }
+    #productTile {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #productTile figure {
+        width: 29%;
+    }
+        
+    #productTile li {
+        font-size: 1.4em;
+    }
+    #quickLinks {
+        background-color: #e5ae5c;
+        box-shadow: 0px 2px 4px 0px rgba(229,174,92,.5);
+        background-color: rgba(229,174,92,.1);
+        display: block;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-top: 10em;
+        padding: 1em 0 0;
+    }
+    #quickLinks h3 {
+        color: #107099;
+        font-size: 1.7rem;
+        padding: 1rem;
+        text-transform: uppercase;
+    }
+    
+    #quickLinks h3 a {
+        color: #107099;
+        font-size: 1.7rem;
+        
+    }
+    #quickLinks ul {
+        list-style-type: none;
+        padding: 0 1rem 1rem;
+    }
+    #quickLinks li {
+        padding: 0 0 .7rem;
+    }
+    #quickLinks a {
+        color: #4f4f4f;
+        font-size: 1.2rem;
+     }
+    #quickLinks a:hover {
+        color: #cd5528;
+    }
+    
+    main {
+        width: 100%;
+    }
+ 
+}
+/*****************************************************************
+                     13.   PRODUCT PAGE
+****************************************************************/
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  margin: 0 auto;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+ }
+.column {
+   width: 26%;
+    padding: 0% 1%;
+}
+#gallery {
+    margin: 2em auto 0;
+}
+
+/******************page styles******/
+.crumb {                      /* go to mobile, main.css */
+    font-size: 1.1rem;
+    display: none;
+}
+#productMain h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 2rem 0 0.4rem;
+}
+.vendCode {
+    font-size: .7em;
+    margin: 0 0 1.3em 1em;
+}
+.brand a {
+    font-size: 1.7em;
+}
+.price {
+    color: #107099;
+    display: block;
+    font-size: 1em;
+    font-weight: 700;
+    margin: .6em 0 .7em .3em;
+}
+#boardSize {
+    font-size: 1.3em;
+    list-style: inside disc;
+}
+#boardSize li {
+    color: #595959;
+    font-size: 1.1em;
+    padding: .3em;
+}
+
+.radiolist {
+    padding: 2em 0 0;
+    margin-bottom: 1.5em;
+}
+ul.radiolist li {
+    list-style-type: none;
+    padding: .3em 0 .6em 0;
+    font-size: 1.4em;
+    color: #4f4f4f;   
+}
+ul.radiolist li:last-of-type {
+    padding-bottom: 2em;
+}
+.radiolist span:before {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";    
+    content: "\f111";                       
+    font-size: 1.1em;
+    color: #107099;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+input[type="radio"] {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    margin-top: -1px;
+    margin-left: 1px;
+    opacity: 0;
+}
+input[type="radio"]:checked ~ span:before {
+    content: "\f192";
+}
+#product fieldset {
+    margin: 2em 0 .5em;
+    border-top: 1px solid #c1d9e3;
+    padding: 0 0 3em 0;
+}
+#quantity {
+    border-radius: 0;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    width: 5em;
+    border: none;
+    box-shadow: inset 0 0 0 1px #107099;
+    margin: 0 1.5em 1.5em 0;
+}
+input.addCart {                            
+    background-color: #107099;                                       
+    border: none;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 1px #107099;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    opacity: 1;
+    padding: 1em;
+    text-transform: uppercase;
+    width: 100%;
+}
+input.addCart:hover {
+    background-color: #3f9cc4;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    opacity: .7;
+}
+input.checkOut {
+    background-color: #fff;                                       
+    border: none;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 1px #107099;
+    color: #107099;
+    font-size: 1.3em;
+    font-weight: 700;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding: 1em;
+    text-transform: uppercase;
+    width: 100%;
+}
+input.checkOut:hover {
+    background-color: #107099;
+    color: #fff;
+    cursor: pointer;
+}
+.returnPolicy a {
+    border-top: 1px solid #c1d9e3;
+    display: block;
+    color: #4f4f4f;
+    font-size: .6em;
+    margin-bottom: 3em;
+    padding-top: .5em;
+    text-align: right;
+}
+#productDetails {
+    background-color: rgba(229,174,92,.1);
+    box-shadow: 0px 2px 4px 0px rgba(229,174,92,.5);
+    padding: 1rem;
+}
+#productDetails h3 {
+    margin-bottom: 1em;
+}
+#productDetails p {
+    font-size: 1.4em;
+}
+#moreOffer h2 {
+    border-top: solid 1px #c1d9e3;
+    font-size: 2em;
+    text-align: center;
+    margin: 4em 0 1.3em;
+    padding-top: 1.5em;
+}
+#picGrid figure {
+    margin: 0 auto;
+    width: 80%;
+}
+#picGrid li {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+#picGrid ul {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width: 275px) {
+    #boardSize {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+} 
+    #boardSize li { width: 50%; }
+}
+@media screen and (min-width: 400px) {
+    #picGrid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    #picGrid figure {
+        width: 47%;
+        max-width: 200px;
+    }
+}
+@media screen and (min-width: 495px) {
+    .crumb {
+        display: block;
+        margin-bottom: 4em;
+    }
+    #gallery {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0 auto;
+    }
+    .mySlides {
+        width: 83%;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .column {
+        width: 80%;
+    }
+    #picGrid figure {
+        width: 22%;
+    }
+    #picGrid li {
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 520px) {
+    #gallery {
+        max-width: 630px;
+    }
+    .mySlides {
+        width:  75%;
+    }
+    .column {
+        width: 77%;
+    }
+    #buyInfo {
+        margin: 0 auto;
+        width: 90%;
+    }
+    input.addCart {
+        margin-right: 2em;
+        width: 45%;
+   }
+    input.checkOut {
+        display: inline-block;
+        width: 45%;
+    }
+}
+@media screen and (min-width: 935px) {
+    #main {
+        margin: 0 auto;
+        width: 100%;
+    }
+    #productMain {
+        margin: 0 auto;
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        column-gap: 5%;
+        grid-template-columns: 1fr 2fr;
+        padding: 0;
+    }
+    #gallery {
+        justify-content: center;
+        margin: 0;
+        min-width: 512px;
+        flex-wrap: wrap;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .mySlides {
+        width: 100%;
+    }
+    .row {
+        flex-direction: row;
+        width: 110%;
+    }
+    #productMain h2 {
+        margin: 0;
+    }  
+      #buyInfo {
+        margin: 0;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 100%;
+    }
+      #productDetails {
+        width: 100%;
+  
+    }
+    #moreOffer h2 {
+        margin-top: 10em;
+    }
+    main {
+        width: 95%;
+        max-width: 1280px;
+    }
+    #picGrid {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+/********************************************************
+    14. ABOUT
 ********************************************************/
 #staffButton h3{
     font-family: 'Amatic SC', cursive;
@@ -525,13 +1231,9 @@ legend {
     display: inline-block;
 }
 /********************************************************
-    11. SURF
+    15. SURF    ADDED 1-21 BY JEN 
 ********************************************************/
-/*
-.breaks{
-    display: flex;
-}
-*/
+
 #surfButton{
     padding: 5px;
     background-color:#107099;
@@ -547,29 +1249,23 @@ legend {
 }
 .surfCard{
     display: grid;
-/*    grid-template-columns: 1fr 2fr 1fr;*/
+    align-items: center;
     border-bottom: solid 1px #c1d9e3;
     padding: 10px 0;
 }
-.surfText{
-    padding: 1em;
-}
-.surfText h2{
-    font-family: 'Amatic SC', cursive;
-    font-weight: 700;
-    color: #107099;
-}
-/*
-.surfWrap{
-    display: grid;
-    grid-gap: 10px;
-   
-    
-}
-*/
 .surfPic{    
     border: 1px solid darkgrey;
     background-color: white;
     padding: 15px 15px 60px 15px;
     box-shadow: 5px 10px 10px darkgrey;
 }
+.surfText{
+    padding: 1.4em;
+}
+.surfText h2{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: #107099;
+}
+
+

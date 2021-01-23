@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+    <html lang="en">
+         <head>
+             <meta charset="utf-8" />
+             <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+             <!--[if lt IE 9]>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
+             </script>
+            <![endif]-->
+             <meta name =”description” content="Mitch's Surf Shop offers California's most innovative hand shaped surfboards in its two stores located in La Jolla Shores and Solana Beach. The surf shop sells broad range of shortboards, longboards, mid length surfboards, surf and dive gear, blank and resin shaping supplies, surfboard fins, surfing and skating clothing and stand up paddleboarding supplies. The store also offers surfboards, wetsuits, fins, snorkels, masks, boogie boards and sups with paddles for rent. " /> 
+             <meta name="keywords" content="Mitch's, surf shop, surf rental, San Diego, La Jolla, Solana Beach, surfboard, longboard, shortboard, surf gear, wetsuits, snorkelling, surfboard shaping, takayama, sups, dive gear, christenson" >
+             <meta name="author" content="Burkley Hoang, Jennifer Kim, Polina Kochetkova" >
+             <title>Hunter Seeker 9'6" Deep Red - Mandala</title>
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+             <link rel="preconnect" href="https://fonts.gstatic.com">
+             <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+             <link href="../css/main.css" type="text/css" rel="stylesheet" >
+             <link href="../css/product.css" rel="stylesheet" type="text/css" />
+         </head>
+         
+        <body>
+        <div class="container">
+        
+        <nav class="topshop">
+      
+            <div class="search">
+                <label for="showSearch" class="showSearch"><span class="fas fa-search" aria-hidden="true"></span></label>
+                <input type="checkbox" id="showSearch" role="button">
+                   <input id="srch" type="text" value="search"></div>
+
+                 <div class="shop">
+                <ul>
+                <li><a href="#">log in</a></li>
+                <li><a href="#">create account</a></li>
+                <li><span class="fas fa-shopping-cart"></span></li>
+                </ul>
+                </div>
+            </nav>
+            
+            <header>
+               
+                <div class="holder">
+                    <a href="../index.html">
+                        <img class="logoTop" src="../images/logoMitch.gif" alt="logo"></a>
+                    <h1>San Diego's Original Surf Shop - since 1967!</h1>
+                </div>
+                
+            <label for="showMenu" class="showMenu">
+           <span id="hamb" class="fas fa-bars" aria-hidden="true"></span></label>
+           <input type="checkbox" id="showMenu" role="button">
+                
+            <nav class="mainnav">
+                <ul>
+                    <li>
+                    <a href="#">Shop</a>
+                    </li>
+                    <li>
+                    <a href="#">Rentals</a>
+                    </li>
+                    <li>
+                    <a href="#">Blog</a>
+                    </li>
+                    <li>
+                    <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                    <a href="locations.html">Locations</a>
+                    </li>
+                    <li>
+                    <a href="#">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+            </header>
+            
+        
+<!-----------------------------Product page--------------------------------------------------------->
+
+            <main>
+                <p class="crumb"><a href="../index.html">Home</a> &gt;<a href="#">Shop</a> &gt; <a href="#">Surfboards</a> &gt; <a href ="#">Longboards</a> &gt; Hunter Seeker 9'6" Deep Red </p>
+                
+         
+         <section id="productMain"> <!-- start #productMain -->
+          
+           
+             <div id="gallery">
+    
+       <div class="mySlides">
+        <img src="../images/purpleB.jpg"  alt="Standing long purple surfboard">
+      </div>
+      
+      <div class="mySlides">
+        <img src="../images/purpleC.jpg" alt="Tip of long purple surfboard">
+      </div>
+      
+      <div class="mySlides">
+        <img src="../images/purpleD.jpg" alt="Laying long purple surfboard">
+      </div>
+        
+      <div class="mySlides">
+        <img src="../images/purpleE.jpg"  alt="Back side of long purple surboard">
+      </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="../images/smBOpt1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Thumbnail of standing long purple surfboard">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../images/smB2Opt.jpg" style="width:100%" onclick="currentSlide(2)" alt="Thumbnail of tip of long purple surfboard">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../images/smB3Opt.jpg" style="width:100%" onclick="currentSlide(3)" alt="Thumbnail of laying long purple surfboard">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../images/smb4Opt.jpg" style="width:100%" onclick="currentSlide(4)" alt="Back side of long purple surboard">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!--     <span id="addRow"></span>-->
+     
+<section id="buyInfo"> <!-- start #buyInfo -->
+                     
+                      <h2>Hunter Seeker 9'6" Deep&nbsp;Red</h2>  <a href="#" class="brand">Mandala</a><span class="vendCode">#IL2098</span> <p><span class="price">&#36;1,665.00</span></p>
+          
+                   
+                   <ul id="boardSize">
+                       
+                           <li>Length: 9'6"</li>
+                           <li>Width:&nbsp;22 1/2"</li>      
+                           <li>Nose:        16"</li>
+                           <li>Tail:        15"</li>
+                           <li>Thick:       3"</li>
+                           
+                      
+                   </ul>
+                   
+                   <form id="product" method="post">
+                       <fieldset>
+                          
+                          
+               <ul class="radiolist">
+                   <li>
+                   <label for="store"><input type="radio" name="delivery" value="store" id="store"><span></span>  Pick up at Solana Beach Store</label>
+                   </li>
+                   <li><label for="shipping"><input type="radio" name="delivery" value="shipping" id="shipping"> <span></span> Ship to an address</label>
+                   </li>
+               </ul>
+                           <div class="cartWrap">
+                               <label for="quantity"></label>
+                                  <select name="quantity" id="quantity">
+                                   <option value="1">1</option>
+                                   <option value="2">2</option>
+                                   <option value="3">3</option>
+                                   <option value="4">4</option>
+                                   <option value="5">5</option>
+                               </select>
+                               <input type="submit" id="submit" name="submit" value="Add to cart" class="addCart">
+                               <input type="submit" id="checkOut" name="submit" value="Check out now" class="checkOut">
+                           </div>
+                       </fieldset>
+                   </form>
+                   <p><span class="returnPolicy"><a href="#">Shipping &amp; Returns</a></span></p>
+    
+              <section id="productDetails">
+               <h3>Product details</h3>
+               <p>Mandala's new HUNTER SEEKER.</p>
+               <p>Semi-opaque Deep Wine Red in a sanded gloss finish. Finish by Moonlight Glassing Company of California, USA. Black logo and hand drawn Mandala on deck. Single baswood wedge stringer, 3/16"-1/16" with brown gluelines. Diamond fin patch, single center box with fin included.</p>
+               <p>The HUNTER SEEKER is a Tri-plane Hull drawn out to a Glider shape. Tear-drop hull bottom with each side panel Tri-plane blending into vee towards the pintail. Cuts through water like a hot knife through butter.</p>
+               <p>Hand shaped and signed polyurethane foam by Manny Caro.</p>
+               </section>
+                   
+      </section> <!-- end #buyInfo -->
+               
+
+
+                </section>   <!-- end #productMmain -->
+
+          
+             <section id="moreOffer">
+              <h2>You may also like</h2>
+                
+                <div id="picGrid">
+      
+                         <figure><a href="#"><img src="../images/grid1.jpg" alt="Colorful standing surfboard" ></a>
+               <figcaption>
+                  <ul>
+                   <li><a href="#">Millenium 9"</a></li>
+                   <li><a href="#">Takayama</a></li>
+                   <li>&#36;8,500.00</li>
+               </ul>
+               </figcaption>
+               </figure>
+               
+               <figure><a href="#"><img src="../images/grid2.jpg" alt="Standing black and red surfboard" ></a>
+               <figcaption>
+               <ul>
+                   <li><a href="#">Tommy Witt 9'4" Hot Red</a></li> 
+                   <li><a href="#">Takayama</a></li>
+                   <li>&#36;1,495.00</li> 
+               </ul>
+             </figcaption>
+              </figure>
+              
+               <figure><a href="#"><img src="../images/grid3.jpg" alt="Standing back and front of red and beige surfboard" ></a>
+               <figcaption>
+               <ul>
+                   <li><a href="#">Jacobs Limited Edition No2</a></li>
+                   <li><a href="#">Takayama</a></li>
+                   <li>&#36;8,500.0</li>
+               </ul>
+               </figcaption>
+               </figure>
+               
+               <figure><a href="#"><img src="../images/grid4.jpg" alt="Blue standing surfboard" ></a>
+               <figcaption>
+               <ul>
+                   <li><a href="#">Scorpion 7'4" Deep Blue </a></li>
+                   <li><a href="#">Takayama</a></li>
+                   <li>&#36;1,325.00</li>
+               </ul>
+               </figcaption>
+               </figure>
+           </div> <!-- end #picGrid -->
+           </section>  <!-- end #moreOffer -->
+           
+            </main>
+         
+<!-- ---------------------------------------end Product ------------------------------ -->
+           
+            <footer>
+           
+                     <div class="F2"><a href="#">contact us</a></div>
+                     <div class="F3"><a href="#">careers</a></div>
+                     <div class="F4"><a href="#">surf report</a></div>
+                     <div class="F5"><a href="#">faq</a></div>
+                     <div class="F6"><a href="#">newsletter</a><p>Subscribe to be the first to hear about exclusive offers and new arrivals:</p></div>
+                     <div class="F7"><a href="#">social media</a></div>
+                     <div class="news"><label for="sign"><input name="signup" type="text" value="name@email.com" id="sign"></label></div>
+                <div class="icons">
+                    <a href="https://www.facebook.com/Mitchs-Surf-Shop-358189128837/?ref=ts"><span class="fab fa-facebook-square"></span></a>
+                    <a href="https://www.instagram.com/mitchssurfshop/"><span class="fab fa-instagram-square"></span></a>
+                    <a href="#"><span class="fab fa-youtube"></span></a>
+                </div>
+            
+           
+            
+            </footer>
+            <div class="bottom">&copy;Copyright 2021 | MITCH'S SURF SHOP |<a href="#"> Privacy Policy</a></div>
+           
+             
+              
+               
+    
+            </div>
+        </body>
+    </html>

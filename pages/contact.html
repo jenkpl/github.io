@@ -15,7 +15,6 @@
              <link rel="preconnect" href="https://fonts.gstatic.com">
              <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
              <link href=../css/main.css type="text/css" rel="stylesheet" >
-             <link href="../css/contact.css" rel=stylesheet type="text/css" />
          </head>
          
         <body>
@@ -67,58 +66,66 @@
                     <a href="locations.html">Locations</a>
                     </li>
                     <li>
-                    <a href="about.html">About Us</a>
+                    <a href="#">About Us</a>
                     </li>
                 </ul>
             </nav>
             </header>
             
         
-<!-----------------------------Contact Us page--------------------------------------------------------->
+<!----------------------------- Contact Us page content --------------------------------------------------------->
 
             <main>
-            <p class="crumb"><a href="../index.html">Home</a> &gt; Contact Us</p>
-            <h1>CONTACT US</h1>
-         <section id="contactUs">
-           <h2>Contact Information</h2>
-            <p>We want to deliver the best experience whenever we get to talk with you. If you have a question or would like to talk to us, don’t hesitate to get in touch. Fill in our contact form and we’ll get right back to you.<br>Mitch's crew is excited to assist your every need! </p>
-            
-            <h2>Phone</h2>
-            <h3>La Jolla Shores store</h3>
-            <p>(858) 459-5933</p>
-            
-            <h3>Solana Beach store</h3>
-            <p>(858) 481-1354</p>
-            
-            <h2>Email</h2>
-            <p>General and shipping questions: <a href="mailto:mitchsnorth@gmail.com">mitchsnorth@gmail.com</a></p>
-            <p>Online orders: <a href="mailto:mitchsorders@gmail.com">mitchsorders@gmail.com</a></p>
-         </section>
-            
-            <form method="post" id="contact1">
-                <fieldset>
-                    <legend>Contact Us </legend>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="tel">Phone number</label>
-                    <input type="tel" id="tel" name="phone">
-                    <label for="msg">Message</label>
-                    <textarea name="message" id="msg" required></textarea>
-                    
-                   <input type="submit" id="submit" value="Send">
-                </fieldset>
-            </form>
+            <div id="wrapperMain"> <!-- start #wrapperMain -->
+                <p class="crumb"><a href="../index.html">Home</a> &gt; Contact Us</p>
+                
+                <h1>Contact Us</h1>
+                
+                         <section id="contactUs">  <!-- start #contactUs -->
+                           <h2>Contact Information</h2>
+                <p>We want to deliver the best experience whenever we get to talk with you. If you have a question or would like to talk to us, don’t hesitate to get in touch. Fill in our contact form and we’ll get right back to you.<br>Mitch's crew is excited to assist your every need! </p>
+                
+                <h2>Phone</h2>
+                <h3>La Jolla Shores store</h3>
+                <p>(858) 459-5933</p>
+                
+                <h3>Solana Beach store</h3>
+                <p>(858) 481-1354</p>
+                
+                <h2>Email</h2>
+                <p>General and shipping questions: <a href="mailto:mitchsnorth@gmail.com">mitchsnorth@gmail.com</a></p>
+                <p>Online orders: <a href="mailto:mitchsorders@gmail.com">mitchsorders@gmail.com</a></p>
+                         </section> <!-- end #contactUs -->
+                
+                <form method="post" id="contact1">
+                    <fieldset>
+                        <legend>Contact Us </legend>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="tel">Phone number</label>
+                        <input type="tel" id="tel" name="phone" optional pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Please use this format 999-999-9999">
+                        <label for="msg">Message</label>
+                        <textarea name="message" id="msg" required></textarea>
+                        
+                     <div class="checks">
+                         <label for="copyEmail"><input type="checkbox" id="copyEmail" name="copy of email"><span></span> Send copy to my email</label>
+                     </div>
+                        
+                       <input type="submit" id="submit" value="Send">
+                    </fieldset>
+                </form>
+            </div>  <!-- end #wrapperMain -->
             </main>
          
-<!-- ---------------------------------------end Contact ------------------------------ -->
+<!-- --------------------------------------- end Contact -------------------------------->
            
             <footer>
                       
                      <div class="F2"><a href="#">contact us</a></div>
                      <div class="F3"><a href="#">careers</a></div>
-                     <div class="F4"><a href="surf.html">surf report</a></div>
+                     <div class="F4"><a href="#">surf report</a></div>
                      <div class="F5"><a href="#">faq</a></div>
                      <div class="F6"><a href="#">newsletter</a><p>Subscribe to be the first to hear about exclusive offers and new arrivals:</p></div>
                      <div class="F7"><a href="#">social media</a></div>

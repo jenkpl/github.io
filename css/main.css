@@ -16,6 +16,11 @@
     13. Product
     14. About
     15. Surf
+    16. Rentals
+    17. Careers
+    18. Staff
+    19. Blog
+    20. FAQ 
     
 *************************************************************************/
 
@@ -26,7 +31,7 @@
 Author: Burkley Hoang, Jennifer Kim, Polina Kochetkova
 Project: Mitch's Surf Shop Website
 Ver: 1.0
-Last Updated: 1/22/2021
+Last Updated: 1/23/2021
 Notes:
 ---------------------------------------------
                         COLOR GUIDE
@@ -247,9 +252,9 @@ input#showSearch, input#srch, input#sm { display: none; }
 
 /*-----header and nav------*/
 header {
-    background: rgba(255,255,255,.5) url(../images/headOpt.jpg) no-repeat;
+    background: rgba(255,255,255,.5) url(../images/headOptMobile.jpg) no-repeat;
     background-blend-mode: lighten;
-    background-size: cover;
+    background-size: 100%; /*Burk TEST*/
     display: flex;
     flex-direction: column;
 }
@@ -351,7 +356,7 @@ main {                             /* for mobile first */
     7. FOOTER
 ********************************************************/
 footer {
-    background: rgba(255,255,255,.7) url(../images/footOpt.jpg) no-repeat;
+    background: rgba(255,255,255,.7) url(../images/footOptMobile.jpg) no-repeat;/* BURK ADDED NEW IMAGE */
     background-blend-mode: lighten;
     display: grid;
     justify-items: center;
@@ -434,16 +439,25 @@ legend {
      }
     footer {
         align-items: center;
+        background: rgba(255,255,255,.8) url(../images/footOpt.jpg) no-repeat; /* BURK ADDED*/
+        background-blend-mode: lighten;/* BURK ADDED*/
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(7, 1fr);   
         justify-items: center;
+        margin-top: 1.8em;/* BURK ADDED*/
      } 
     footer p { font-size: 1em; }
     footer input {
         font-size: 1.4em;
         padding: .9rem;
     }
+    header {
+    background: rgba(255,255,255,.5) url(../images/headOpt.jpg) no-repeat;/* BURK ADDED*/
+    background-blend-mode: lighten;/* BURK ADDED*/
+    display: flex;/* BURK ADDED*/
+    flex-direction:column;/* BURK ADDED*/
+        
     .crumb{
         display: block;
     }
@@ -483,6 +497,170 @@ legend {
     flex-direction: row;
     justify-content: space-around;
 }
+ 
+/*-----CAREER PAGE queries-------*/
+    
+    #career {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-areas: 
+            "p pg";
+        align-content: center;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    #career img {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 30em;
+    }
+    
+/*-----END of CAREER PAGE-----*/
+    
+    
+/*-----STAFF PAGE queries-------*/
+    
+    #staff {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-areas: 
+            "s1 s2"
+            "c1 c2"
+            "s3 s4"
+            "c3 c4"
+            "s5 s6"
+            "c5 c6";
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #staff p {
+        width: 90%;  
+        height: 40%;  
+        margin: 1em;  
+
+    }
+    
+/*-----END of STAFF PAGE-----*/
+    
+}
+ 
+/*BURKLEY'S SECTION MEDIA QUERIES (LG)*/
+@media screen and (min-width: 700px) {
+     
+/*-----CAREER PAGE-------*/
+    #career {
+        margin-top: 10em;
+    }
+    
+    #career img {
+        max-width: 400px;
+        height: auto;
+        margin-bottom: 30em;
+    }
+    
+/*-----END of CAREER PAGE-----*/
+    
+/*-----BLOG PAGE-------*/
+    #blog {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 15px;
+/*
+        grid-template-areas: 
+            "p1 b2"
+            "p2 b1"
+            "p3 b3";
+*/
+        align-content: center;
+        justify-content: center;
+        text-align: left;
+    }
+    
+
+    #blog img {
+        width: 200px;
+        height: auto;
+    }
+    
+    .blog1, .blog2, .blog3 {
+        border: solid 2px #c1d9e3;
+        padding: 10px;
+        box-shadow: 5px 5px rgba(193, 217, 227, 0.5);
+        display: flex;
+    }
+    
+    .body1, .body2, .body3 {
+        padding-left:1em;
+        width: 90%;
+    }
+    
+    .aTag {
+        font-size: 7px;
+        align-items: flex-end;
+        display: flex;
+        width: 200px;
+        
+    }   
+    
+/*-----END of CAREER PAGE-----*/
+    
+/*-----FAQ PAGE-------*/    
+
+    
+    
+    
+/*-----END of FAQ PAGE-----*/    
+    
+}
+
+
+/*big-screen*/
+@media screen and (min-width: 900px) {
+    
+
+    
+/*-----STAFF PAGE-------*/
+    
+    #staff {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-areas: 
+            "s1 c1 s2 c2"
+            "s3 c3 s4 c4"
+            "s5 c5 s6 c6";
+        align-content: center;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    #staff p {
+        width: 90%;  
+        height: 40%;  
+        margin: 1em;  
+
+    }
+    
+    .s1 img, .s2 img, .s3 img, .s4 img, .s5 img, .s6 img {
+        max-width: 200px;
+        height: auto;
+        margin-top: 2em;
+    }
+    
+/*-----END of STAFF PAGE-----*/
+
+}
+
+    
 
 /********************************************************
                 10. LOCATIONS PAGE
@@ -1328,3 +1506,275 @@ input.checkOut:hover {
     }
    
 }
+/********************************************************
+    17. CAREER AREA
+********************************************************/
+
+ #career {
+    margin: 1em auto;
+    width: 90%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas: 
+        "p"
+        "pg";
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+
+.pic {
+    grid-area: p;
+}
+
+.paragraph {
+    grid-area: pg;
+}
+
+.paragraph h3 {
+    font-size: 1.75em;
+}
+
+.paragraph p {
+    color: #4f4f4f;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.6em;
+    line-height: 1.6;
+    margin-bottom: .7em;
+    width: 90%;  
+/*    height: 50%;  */
+
+}
+
+#career img {
+    max-width: 300px;
+    height: auto;
+}
+
+
+
+/***************     END OF CAREER AREA      *************/
+
+
+/********************************************************
+    18. STAFF AREA 
+********************************************************/
+#staff {
+    margin: 1em auto;
+    width: 90%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas: 
+        "s1"
+        "c1"
+        "s2"
+        "c2"
+        "s3"
+        "c3"
+        "s4"
+        "c4"
+        "s5"
+        "c5"
+        "s6"
+        "c6";
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/*
+.c1, .c2, .c3, .c4, .c5, .c6 {
+    font-size: 1.75em;
+}
+*/
+
+#staff p {
+    color: #4f4f4f;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin-bottom: .7em;
+    width: 90%;  
+/*    height: 50%;  */
+
+
+}
+
+.s1 {
+    grid-area: s1;
+}
+
+.s2 {
+    grid-area: s2;
+}
+
+.s3 {
+    grid-area: s3;
+}
+
+.s4 {
+    grid-area: s4;
+}
+
+.s5 {
+    grid-area: s5;
+}
+
+.s6 {
+    grid-area: s6;
+}
+
+.c1 {
+    grid-area: c1;
+}
+
+.c2 {
+    grid-area: c2;
+}
+
+.c3 {
+    grid-area: c3;
+}
+
+.c4 {
+    grid-area: c4;
+}
+
+.c5 {
+    grid-area: c5;
+}
+
+.c6 {
+    grid-area: c6;
+}
+
+
+.s1 img, .s2 img, .s3 img, .s4 img, .s5 img, .s6 img {
+    max-width: 200px;
+    height: auto;
+}
+
+/***************     END OF STAFF PAGE      *************/
+/********************************************************
+    19. BLOG AREA
+********************************************************/
+#blog {
+    margin: 1em auto;
+    width: 90%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas: 
+        "p1"
+        "b1"
+        "p2"
+        "b2"
+        "p3"
+        "b3";
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pic1 {
+    grid-area: p1;
+}
+
+.body1 {
+    grid-area: b1;
+}
+
+.pic2 {
+    grid-area: p2;
+}
+
+.body2 {
+    grid-area: b2;
+}
+
+.pic3 {
+    grid-area: p3;
+}
+
+.body3 {
+    grid-area: b3;
+}
+
+#blog h3 {
+    font-size: 1.75em;
+    margin-bottom: .2em;
+
+}
+
+#blog p {
+    font-size: 1.6em;
+    line-height: 1.6;
+    margin-bottom: .7em;
+
+}
+
+#blog img {
+    width: 100%;
+    height: auto;
+}
+/***************     END OF BLOG PAGE      *************/
+
+
+/********************************************************
+   20. FAQ
+********************************************************/
+
+#faq {
+    margin: 1em auto;
+    width: 90%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas:
+        "l1 l2"
+        "l3 l4"
+    align-content: center;
+    justify-content: center;
+    text-align: left; 
+}
+
+.list1 {
+    grid-area: l1;
+}
+
+.list2 {
+    grid-area: l2;
+    margin-bottom: 15px;
+}
+
+.list3 {
+    grid-area: l3;
+}
+
+.list4 {
+    grid-area: l4;
+}
+
+
+#faq ul li {
+    list-style-type: none;
+    font-size: 1.6em;
+    color: #107099;
+    margin-left: 1em;
+}
+
+#faq li:hover {
+    background-color: inherit;
+}
+
+
+/***************     END OF FAQ PAGE      *************/
+
+
+
+
+
+
+
+
+

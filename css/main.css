@@ -519,7 +519,17 @@ legend {
     }
     
 /*-----END of CAREER PAGE-----*/
+/*-----FAQ PAGE-------*/    
+        .caShip, .usShip, .woShip {
+        display: flex;
+    }
     
+    .caShip ul, .usShip ul, .woShip ul {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 2em;
+    }
+/*-----END of FAQ PAGE-----*/  
     
 /*-----STAFF PAGE queries-------*/
     

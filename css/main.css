@@ -1381,6 +1381,7 @@ input.checkOut:hover {
     display: grid;
     align-items: center;
     border-bottom: solid 1px #c1d9e3;
+    justify-items: center;
     padding: 10px 0;
 }
 .surfPic{    

@@ -360,6 +360,7 @@ main {                             /* for mobile first */
     7. FOOTER
 ********************************************************/
 footer {
+    align-items: center;
     background: rgba(255,255,255,.7) url(../images/footOptMobile.jpg) no-repeat;/* BURK ADDED NEW IMAGE */
     background-blend-mode: lighten;
     display: grid;
@@ -368,8 +369,8 @@ footer {
     padding: .5em 1em;
 }
 footer a{
-    font-size: 1.4em;      /*JEN ADDED*/
-    padding: .5em 0;      
+    font-size: 1.6em;      /*JEN ADDED*/
+    padding: 1em 0;      
 }
 
 footer p { font-size: 1.4em; }
@@ -471,11 +472,10 @@ legend {
    
     .icons {
         font-size: 2em;
-/*
-        grid-column: -1;     JEN COMMENTED OUT
-        grid-row: 2;
-*/
-        text-align: center;
+
+ /*       grid-column: -1;     JEN COMMENTED OUT
+        grid-row: 2;*/ 
+     text-align: center;
     }
     .news{
         grid-row: 2;

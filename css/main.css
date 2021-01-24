@@ -500,7 +500,7 @@ legend {
     .surfCard{
             grid-template-columns: 1fr 2fr 1fr;
     }
-}
+
 .rentWrap{                   /*JEN NEW*/
     flex-direction: row;
     justify-content: space-around;

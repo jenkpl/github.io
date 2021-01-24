@@ -1412,8 +1412,9 @@ input.checkOut:hover {
 /*    margin: auto;*/
     text-align: center;
 }
-.rentButton h3{
+.rentButton a{
     font-family: 'Amatic SC', cursive;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
 }

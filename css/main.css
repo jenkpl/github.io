@@ -1362,7 +1362,7 @@ input.checkOut:hover {
 /********************************************************
     15. SURF    ADDED 1-21 BY JEN 
 ********************************************************/
-
+.buttonWrap{text-align: center;}
 #surfButton{
     padding: 5px;
     background-color:#107099;
@@ -1372,7 +1372,7 @@ input.checkOut:hover {
 /*    margin: auto;*/
     text-align: center;
 }
-#surfButton h3{
+#surfButton a{
     font-family: 'Amatic SC', cursive;
     font-weight: 700;
     color: #fff;
@@ -1391,7 +1391,7 @@ input.checkOut:hover {
     box-shadow: 5px 10px 10px darkgrey;
 }
 .surfText{
-    padding: 1.4em;
+    padding: 1.6em;
 }
 .surfText h2{
     font-family: 'Amatic SC', cursive;

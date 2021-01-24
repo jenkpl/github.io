@@ -186,11 +186,11 @@ h1 {
 }
 h2, h3, p { color: #4f4f4f; }                  /* ------ 2. Group selector ------- */
 h2 {
-    font-size: 2.5em;
-    margin: .7em 0 .3em;
+    font-size: 2.7em;
+    margin: 1em 0 .5em;
 }
 h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: .2em;
 }
 p {
@@ -240,12 +240,11 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
 }
 .shop li { display: inline-block; }                           
 nav ul li {
-    display: block;
     font-size: 1.3em;
+    display: block;
     text-align: center;
 }
 nav ul li:hover { background-color: #ffdd7b; }
-
 input#showSearch, input#srch, input#sm { display: none; }
 #showSearch:checked + input#srch {display: inline-block}
 
@@ -297,12 +296,8 @@ ul.shopMenu{                     /*1-20 ADDED BY JEN*/
 /*hide the checkbox*/
 input#showMenu { display: none; }
 #showMenu:checked + .mainnav { display: block; }
-/*-----breadcrumb (ALL PAGES BUT HOME)-----*/
-.crumb { 
-    font: 700 1.1em 'Nunito Sans', sans-serif; 
-    text-transform: uppercase;
-    display: none;
-}
+
+
 
 /********************************************************
     5. MAIN BODY CONTENT 
@@ -350,6 +345,9 @@ main {                             /* for mobile first */
 .container{
 /*    max-width: 1280px;*/
     margin: auto;
+}
+.crumb { 
+    display: none;
 }
 
 /********************************************************
@@ -437,6 +435,12 @@ legend {
         flex-direction: row;
         justify-content: space-evenly;
      }
+    .crumb {
+        display: block;
+        font: 700 1.2em 'Nunito Sans', sans-serif; 
+        margin: 1em 1em 2em;
+        text-transform: uppercase;
+    }
     footer {
         align-items: center;
         background: rgba(255,255,255,.8) url(../images/footOpt.jpg) no-repeat; /* BURK ADDED*/
@@ -457,10 +461,8 @@ legend {
     background-blend-mode: lighten;/* BURK ADDED*/
     display: flex;/* BURK ADDED*/
     flex-direction:column;/* BURK ADDED*/
-        
-    .crumb{
-        display: block;
     }
+   
     .icons {
         font-size: 2em;
 /*
@@ -520,7 +522,7 @@ legend {
     
 /*-----END of CAREER PAGE-----*/
 /*-----FAQ PAGE-------*/    
-        .caShip, .usShip, .woShip {
+    .caShip, .usShip, .woShip {
         display: flex;
     }
     
@@ -728,50 +730,81 @@ a[href="mailto:mitchsorders@gmail.com"] {                            /***-------
     margin: 3.5em 0 8em;
     min-width: 200px;
 }
-#contact1 input {
-    padding: 1.4em;
-    border: solid 1px #4f4f4f; 
-}
-#contact1 input[type="text"], input[type="email"], input[type="tel"] { width: 100%; }
 #contact1 legend {
     color: #107099;
     font-size: 2.6em;
     text-align: center;
 }
-#contact1 input[type="submit"] { 
-    background-color: #3f9cc4;                                        /*** --- fallback --- ***/
-    background-image: linear-gradient(180deg, #107099, #0fc0e7);
-    border: solid 4px #fff;
-    border-radius: 25px;
-    color: #fff;
-    font: 700 1.5em 'Nunito Sans', sans-serif;
-    margin-top: 1.2em;
-    opacity: .7;
-    padding: .75em 1em;
-    text-transform: uppercase;
-    width: 100%;
-}
-#contact1 input[type="submit"]:hover {
-    border-color: #dbf5ff;                               /* choose one and remove the rest*/
-    border-color: #FFDD7B;
-    border-color: #B7DDDA;
-    cursor: pointer;
-    outline: none;
-    opacity: 1;
-}
 #contact1 label {
     color: #4f4f4f;
     display: block;
     font-size: 1.3em;
-    margin: .9em 0 .4em;
+    margin: 1.5em 0 .4em;
     text-transform: uppercase;
 }
+#contact1 input {
+    padding: .6em;
+    border: solid 2px #ccc;
+    outline: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+#contact1 input[type="text"], input[type="email"], input[type="tel"] {
+    font-size: 1.6em; 
+     width: 100%;
+}
+#contact1 input:required, #contact1 textarea:required { 
+    background-color: rgba(16,112,153,.1);
+    border: solid 2px rgba(16,112,153,.2)
+}
+#contact1 input[type="email"]:invalid:focus, #contact1 input[type="tel"]:invalid:focus { border: solid 1px #d00000; }
+#contact1 label + input:focus { border: solid 3px #107099; }
 #contact1 textarea {
-    border: solid 1px #4f4f4f;
+    border: solid 2px #ccc;
     min-height: 12em;
+    outline: none;
     overflow: auto;
     padding: .75em;
     width: 100%;
+}
+#contact1 textarea:focus { border: solid 3px #107099; }
+#contact1 label[for="copyEmail"] { margin-top: 0; }
+.checks span:before {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";    
+    content: "\f0c8";                      
+    font-size: 1.5em;
+    color: rgba(16,112,153,.8);
+    vertical-align: middle;
+    margin-top: -3px;
+}
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: -2px;
+    margin-left: -1px;
+}
+input[type="checkbox"]:checked ~ span:before {
+    content: "\f14a";
+}
+#contact1 input[type="submit"] { 
+    background-color: #107099;                                        
+/*    background-image: linear-gradient(180deg, #107099, #0fc0e7);*/
+    border-radius: 25px;
+    color: #fff;
+    font: 700 1.5em 'Nunito Sans', sans-serif;
+    margin-top: 1.2em;
+    opacity: 1;
+    outline: none;
+    padding: .8em 1em;
+    text-transform: uppercase;
+    width: 100%;
+}
+#contact1 input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 @media screen and (min-width: 507px) {
@@ -789,18 +822,16 @@ a[href="mailto:mitchsorders@gmail.com"] {                            /***-------
     #contact1 input[type="submit"] {
         display: block;
         margin: 1.2em auto 0;
-        padding: 0.7em;
+        padding: 1em;
         width: 40%;
     }
 }
-@media screen and (min-width: 665px) {                  /* check how main width affects the pages*/
-    main {
-        width1: 95%;
-    }
+@media screen and (min-width: 665px) {                  
     #contact1 input {
-        padding: 1em;
+        padding: .7em;
     }
 } 
+
 /**********************END FORM*********************************/
 /********************************************************
                12. CATEGORY PAGE
@@ -808,90 +839,65 @@ a[href="mailto:mitchsorders@gmail.com"] {                            /***-------
 /*Colors: #c1d9e3 light blue 
  light beige: #dfc2a7;
    light gold #e5ae5c;*/
-
-/*
-.crumb {
-    display: none;
-}
-*/
 .categoriesContainer {
+  margin: auto;
   max-width: 90%;
   position: relative;
-  margin: auto;
-}
+  }
 #categoriesSm {
     border-bottom: solid 1px #c1d9e3;
     margin-top: 7em;
     padding-bottom: 5em;
 }
-/* Hide the images by default */
-.slideCat {
-  display: none;
-}
-.slideCat img {
-    width: 100%;
-}
-
-/* Next & previous buttons */
+.slideCat { display: none; }
+.slideCat img { width: 100%; }
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 104%;
-  width: auto;
-  margin: -22px -17px 0;
-  padding: 16px;
+  border-radius: 0 3px 3px 0;
   color: #107099;
+  cursor: pointer;
   font-weight: bold;
   font-size: 30px;
+  margin: -22px -17px 0;
+  top: 104%;
+  padding: 16px;
+  position: absolute;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  width: auto;
   user-select: none;
 }
-
-/* Position the "next button" to the right */
 .next {
-  right: 0;
   border-radius: 3px 0 0 3px;
+  right: 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  color: #107099;
-}
-
-/* Caption text */
-.capt a {
+.prev:hover, .next:hover {color: #107099;}
+capt a {
   background-color: #dfc2a7;
-  opacity: .9;
   color: #107099;
   font-size: 25px;
   font-family: 'Amatic Sc', cursive;
+  opacity: .9;
   padding: 8px 12px;
   position: absolute;
   top: 40%;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
-
-/* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: .7em 2px;
   background-color: #107099;
-  opacity: .5;
   border-radius: 50%;
+  cursor: pointer;
   display: inline-block;
+  height: 10px;
+  margin: .7em 2px;
+  opacity: .5;
   transition: background-color 0.6s ease;
+  width: 10px;
 }
-
 .active, .dot:hover {
   background-color: #107099;
-    opacity: 1;
+  opacity: 1;
 }
-
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -909,17 +915,16 @@ a[href="mailto:mitchsorders@gmail.com"] {                            /***-------
   to {opacity: 1}
 }
 /************ end Slider ******************/
-#categoriesL {
-    display: none;
-}
-#productTile {
+#categoriesL { display: none; }
+.categoriesContainer { max-width: 80%; }
+#productTile { 
     margin-top: 4.5em;
     padding: 1.5em 1em 0;
 }
 #productTile li {
-    text-align: center;
     font-weight: 700;
     font-size: 1.4em;
+    text-align: center;
 }
 #productTile ul {
     list-style-type: none;
@@ -928,81 +933,68 @@ a[href="mailto:mitchsorders@gmail.com"] {                            /***-------
 .pagination {
     margin: 10rem 0 7rem;
     text-align: center;
-    
 }
-
 .pagination a {
     color: #000;
     font-size: 1.1em;
     padding: 8px 16px;
     transition: background-color .3s;
 }
-
-/* Style the active/current link */
 .pagination a.active {
   background-color: #107099;
   color: white;
 }
-#quickLinks {
-    display: none;
-}
-/* Add a grey background color on mouse-over */
+#quickLinks {display: none;}
 .pagination a:hover:not(.active) {background-color: #c1d9e3;}
 
-@media screen and (min-width: 320px) {
-    .categoriesContainer {
-      max-width: 60%;
-  }
-   .dot {
-      margin: .8em 2px;
-}
+@media screen and (min-width: 400px) {
+    .categoriesContainer { max-width: 60%; }
+    .dot { margin: .8em 2px; }
     #productTile {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    #productTile figure {
-        width: 47%;
-    }
-    #productTile li {
-        font-size: 1.3em;
-    }
+    #productTile figure { width: 47%; }
+    #productTile li { font-size: 1.1em; }
 }
-
 @media screen and (min-width: 557px) {
-    #categoriesSm {
-        display: none;
-    }
+    #categoriesSm { display: none; }
     #categoriesL {
         border-bottom: solid 1px #c1d9e3;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: 0 auto;
-        max-width: 1000px;
         padding-bottom: 3em;
     }
     #categoriesL figure {
-        position: relative;
-        margin: 0 3% 2%;
+        background-blend-mode: lighten;
         flex-basis: 137px;
-
+        margin: 0 3% 2%;
+        position: relative;
     }
-
-    .categoryName a {
+    #categoriesL img {
+        opacity: .6;
+    }
+       #categoriesL img:hover {
+        opacity: 1;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+     .categoryName a {
        background-color: #107099;
-   opacity: .8;
-  color: #fff;
-  font-size: 2.5em;
-  font-family: 'Amatic Sc', cursive;
-  padding: 4px 0;
- position: absolute;
-  top: 34%;
-  width: 100%;
-  text-align: center;
+       color: #fff;
+       font: 2.5em 'Amatic Sc', cursive; 
+       opacity: .8;
+       padding: 4px 0;
+       position: absolute;
+       top: 34%;
+       width: 100%;
+       text-align: center;
     }
         #productTile {
-        margin-top: 2em;
+        margin-top: 6em;
         padding: 7em 0 0;
     }
     #productTile figure {
@@ -1011,45 +1003,36 @@ a[href="mailto:mitchsorders@gmail.com"] {                            /***-------
     }
 }
 @media screen and (min-width: 732px) {
-     .crumb {
-        display: block;
-        font-size: 1.4em;
-    }
     #wrapper {
         display: grid;
         grid-gap: 3%;
-        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 70% 30%;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 100%
     }
     #categoriesL {
         flex-wrap: nowrap;
         max-width: 100%;
     }
-    #categoriesL figure {
-        margin: 0 1%;
-    }
-    .categoryName a {
-        font-size: 3em;
-    }
+    #categoriesL figure { flex-basis: 100%; margin: 0 1%; }
+    .categoryName a { font-size: 3em; }
     #productTile {
         grid-column: 2/3;
         grid-row: 1/2;
     }
-    #productTile figure {
-        width: 29%;
-    }
-        
-    #productTile li {
-        font-size: 1.4em;
-    }
+    #productTile figure { width: 20%; }
+    #productTile li { font-size: 1.4em; }
     #quickLinks {
         background-color: #e5ae5c;
-        box-shadow: 0px 2px 4px 0px rgba(229,174,92,.5);
-        background-color: rgba(229,174,92,.1);
+        background-color: rgba(252,222,167,.1);
+        border: solid 1px rgba(252,222,167,.1);
+        box-shadow: 0px 2px 4px 0px rgba(252,222,167,.5);
         display: block;
         grid-column: 1/2;
-        grid-row: 1/2;
-        margin-top: 10em;
-        padding: 1em 0 0;
+        grid-row: 1/1;
+        margin-top: 14em;
+        padding: 1em .5em 0;
     }
     #quickLinks h3 {
         color: #107099;
@@ -1057,78 +1040,52 @@ a[href="mailto:mitchsorders@gmail.com"] {                            /***-------
         padding: 1rem;
         text-transform: uppercase;
     }
-    
     #quickLinks h3 a {
         color: #107099;
         font-size: 1.7rem;
-        
+        text-transform: uppercase;
     }
     #quickLinks ul {
         list-style-type: none;
         padding: 0 1rem 1rem;
     }
-    #quickLinks li {
-        padding: 0 0 .7rem;
-    }
+    #quickLinks li { padding: 0 0 .8rem; }
     #quickLinks a {
         color: #4f4f4f;
         font-size: 1.2rem;
+        text-transform: none;
      }
-    #quickLinks a:hover {
-        color: #cd5528;
+    #quickLinks a:hover { color: #cd5528; }
+    .placeholder { 
+        grid-column: 1/2;
+        grid-row: 2/3
     }
-    
-    main {
-        width: 100%;
-    }
- 
-}
+    main { width: 100%;}
+ }
 /*****************************************************************
                      13.   PRODUCT PAGE
 ****************************************************************/
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-}
-
-/* Hide the images by default */
+.container { position: relative;}
+#gallery { margin: 2em auto 0;}
 .mySlides {
-  display: none;
-  margin: 0 auto;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
+    display: none;
+    margin: 0 auto;
 }
 .row {
     display: flex;
     justify-content: space-between;
  }
 .column {
-   width: 26%;
     padding: 0% 1%;
+    width: 26%;
 }
-#gallery {
-    margin: 2em auto 0;
-}
+.demo { opacity: 0.6; }
+.cursor { cursor: pointer;}
+.active, .demo:hover { opacity: 1; }
 
 /******************page styles******/
-.crumb {                      /* go to mobile, main.css */
-    font-size: 1.1rem;
-    display: none;
-}
 #productMain h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 700;
     margin: 2rem 0 0.4rem;
 }
@@ -1155,56 +1112,52 @@ a[href="mailto:mitchsorders@gmail.com"] {                            /***-------
     font-size: 1.1em;
     padding: .3em;
 }
-
-.radiolist {
-    padding: 2em 0 0;
-    margin-bottom: 1.5em;
+#productForm fieldset {
+    border-top: 1px solid #c1d9e3;
+    margin: 2em 0 .5em;
+    padding: 0 0 3em 0;
 }
-ul.radiolist li {
+.radiolist {
+    margin-bottom: 1.5em;
+    padding: 2em 0 0;
+}
+.radiolist li {
+    color: #4f4f4f; 
+    font-size: 1.4em;
     list-style-type: none;
     padding: .3em 0 .6em 0;
-    font-size: 1.4em;
-    color: #4f4f4f;   
 }
-ul.radiolist li:last-of-type {
-    padding-bottom: 2em;
-}
+.radiolist li:last-of-type { padding-bottom: 1em; }
+.radiolist label[for="store"]:hover { cursor: pointer; }
+.radiolist label[for="shipping"]:hover { cursor: pointer; }
 .radiolist span:before {
-    display: inline-block;
-    font-family: "Font Awesome 5 Free";    
-    content: "\f111";                       
-    font-size: 1.1em;
     color: #107099;
+    content: "\f111";
+    display: inline-block;
+    font: 1.1em "Font Awesome 5 Free";    
+    margin-top: -3px;                      
     vertical-align: middle;
-    margin-top: -3px;
 }
 input[type="radio"] {
-    position: absolute;
-    width: 22px;
     height: 22px;
     margin-top: -1px;
     margin-left: 1px;
     opacity: 0;
+    position: absolute;
+    width: 22px;
 }
-input[type="radio"]:checked ~ span:before {
-    content: "\f192";
-}
-#product fieldset {
-    margin: 2em 0 .5em;
-    border-top: 1px solid #c1d9e3;
-    padding: 0 0 3em 0;
-}
+input[type="radio"]:checked ~ span:before { content: "\f192"; }
 #quantity {
+    border: none;
     border-radius: 0;
+    box-shadow: inset 0 0 0 1px #107099;
     display: block;
+    margin: 0 1.5em 1em 0;
     padding: 1em;
     text-align: center;
     width: 5em;
-    border: none;
-    box-shadow: inset 0 0 0 1px #107099;
-    margin: 0 1.5em 1.5em 0;
 }
-input.addCart {                            
+ input.addCart {                            
     background-color: #107099;                                       
     border: none;
     border-radius: 0;
@@ -1212,18 +1165,16 @@ input.addCart {
     color: #fff;
     font-size: 1.3em;
     font-weight: 700;
-    margin-bottom: 1.5em;
+    margin: .5em 0 1.5em;
     opacity: 1;
     padding: 1em;
     text-transform: uppercase;
     width: 100%;
 }
 input.addCart:hover {
-    background-color: #3f9cc4;
+    background-color: rgba(16,112,153,.7);
     color: #fff;
     cursor: pointer;
-    font-weight: 700;
-    opacity: .7;
 }
 input.checkOut {
     background-color: #fff;                                       
@@ -1232,9 +1183,6 @@ input.checkOut {
     box-shadow: inset 0 0 0 1px #107099;
     color: #107099;
     font-size: 1.3em;
-    font-weight: 700;
-    grid-column: 1/3;
-    grid-row: 2/3;
     padding: 1em;
     text-transform: uppercase;
     width: 100%;
@@ -1249,40 +1197,37 @@ input.checkOut:hover {
     display: block;
     color: #4f4f4f;
     font-size: .6em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     padding-top: .5em;
     text-align: right;
 }
 #productDetails {
-    background-color: rgba(229,174,92,.1);
-    box-shadow: 0px 2px 4px 0px rgba(229,174,92,.5);
-    padding: 1rem;
+    background-color: rgba(252,222,167,.1);
+    border: solid 1px rgba(252,222,167,.1);
+    box-shadow: 0px 2px 4px 0px rgba(252,222,167,.5);
+    padding: 1rem 1.5rem 1rem;
 }
-#productDetails h3 {
-    margin-bottom: 1em;
-}
-#productDetails p {
-    font-size: 1.4em;
-}
+#productDetails h3 { margin-bottom: 1em; }
+#productDetails p { font-size: 1.5em; }
 #moreOffer h2 {
     border-top: solid 1px #c1d9e3;
     font-size: 2em;
-    text-align: center;
-    margin: 4em 0 1.3em;
+    margin: 4em 0 2em;
     padding-top: 1.5em;
+    text-align: center;
 }
 #picGrid figure {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
 }
 #picGrid li {
     text-align: center;
-    font-weight: 700;
     font-size: 1.2em;
+    font-weight: 700;
 }
 #picGrid ul {
     list-style-type: none;
-    margin-bottom: 1em;
+    margin-bottom: 4.5em;
 }
 
 @media screen and (min-width: 275px) {
@@ -1293,123 +1238,105 @@ input.checkOut:hover {
         justify-content: space-between;
 } 
     #boardSize li { width: 50%; }
-}
-@media screen and (min-width: 400px) {
     #picGrid {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        
     }
-    #picGrid figure {
-        width: 47%;
-        max-width: 200px;
-    }
+    #picGrid figure { width: 44%; }
+    #picGrid li { font-size: 1.1em;}
 }
+
 @media screen and (min-width: 495px) {
-    .crumb {
-        display: block;
-        margin-bottom: 4em;
-    }
     #gallery {
         display: flex;
         justify-content: center;
         flex-direction: row;
         margin: 0 auto;
     }
-    .mySlides {
-        width: 83%;
-    }
+    .mySlides { width: 83%; }
     .row {
         display: flex;
         flex-direction: column;
     }
-    .column {
-        width: 80%;
-    }
-    #picGrid figure {
-        width: 22%;
-    }
-    #picGrid li {
-        font-size: 1em;
-    }
-}
-@media screen and (min-width: 520px) {
-    #gallery {
-        max-width: 630px;
-    }
-    .mySlides {
-        width:  75%;
-    }
-    .column {
-        width: 77%;
-    }
-    #buyInfo {
+    .column { width: 80%; }
+    #picGrid { 
         margin: 0 auto;
-        width: 90%;
+        width: 100%; 
+    }
+    #picGrid figure { width: 22%; }
+    #picGrid li { font-size: 1.3em; }
+}
+@media screen and (min-width: 522px) {
+    .crumb {
+        display: block;
+        font: 700 1.2em 'Nunito Sans', sans-serif; 
+        margin: 1em 1em 4em;
+        text-transform: uppercase;
+    }
+    #productMain { margin: 0 auto; width: 95%;}     
+    #productMain h2 {font-size: 2.3rem;}
+    #gallery { max-width: 630px; }
+    .mySlides { width: 75%; }
+    .column { width: 70%; }
+    #boardSize { width: 80%; }
+    #quantityWrap {
+        display: inline;
+        margin-right: 3%;
+        width: 50px;
     }
     input.addCart {
-        margin-right: 2em;
-        width: 45%;
-   }
+        display: inline;
+        margin-right: 3%;
+        width: 40%;
+    }
     input.checkOut {
-        display: inline-block;
-        width: 45%;
+        display: inline;
+        width: 40%;
+    }
+    #quantity { 
+        display: inline;
+        height: 41px;
+        margin: 0;
+    }
+    #moreOffer { 
+        margin: 0 auto; 
+        width: 95%;
     }
 }
-@media screen and (min-width: 935px) {
-    #main {
-        margin: 0 auto;
-        width: 100%;
-    }
+@media screen and (min-width: 983px) {
     #productMain {
-        margin: 0 auto;
+        column-gap: 8%;
         display: grid;
-        justify-content: center;
-        width: 100%;
-        column-gap: 5%;
         grid-template-columns: 1fr 2fr;
-        padding: 0;
-    }
-    #gallery {
         justify-content: center;
-        margin: 0;
-        min-width: 512px;
-        flex-wrap: wrap;
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    .mySlides {
-        width: 100%;
-    }
-    .row {
-        flex-direction: row;
-        width: 110%;
-    }
-    #productMain h2 {
-        margin: 0;
-    }  
-      #buyInfo {
-        margin: 0;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        width: 100%;
-    }
-      #productDetails {
-        width: 100%;
-  
-    }
-    #moreOffer h2 {
-        margin-top: 10em;
-    }
-    main {
+        margin: 0 auto;
         width: 95%;
         max-width: 1280px;
     }
-    #picGrid {
-        margin: 0 auto;
-        width: 80%;
+    #gallery {
+        flex-wrap: wrap;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-content: center;
+        min-width: 440px;
     }
+    .mySlides { width: 110%; }
+    .row {
+        flex-direction: row;
+        width: 100%;
+    }
+    #productMain h2 { margin: 0; } 
+    #buyInfo {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin: 0;
+     }
+    input.addCart { width: 38%; }
+    input.checkOut { width: 38%; }
+    #productDetails { width: 100%; }
+    #moreOffer h2 { margin-top: 7em; }
+    #picGrid { width: 80%; }
 }
 /********************************************************
     14. ABOUT

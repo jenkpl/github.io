@@ -240,7 +240,7 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
 }
 .shop li { display: inline-block; }                           
 nav ul li {
-    font-size: 1.3em;
+    font-size: 1.4em;
     display: block;
     text-align: center;
 }

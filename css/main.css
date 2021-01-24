@@ -1348,6 +1348,7 @@ input.checkOut:hover {
 ********************************************************/
 #staffButton a{
     font-family: 'Amatic SC', cursive;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
     
@@ -1374,6 +1375,7 @@ input.checkOut:hover {
 }
 #surfButton a{
     font-family: 'Amatic SC', cursive;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
 }

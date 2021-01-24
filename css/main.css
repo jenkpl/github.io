@@ -309,8 +309,10 @@ main {                             /* for mobile first */
 /*rules for style guide styling*/
 .code{
     font-family: "Courier New", monospace;
-    font-size: .9em;
+    font-size: 1.3em;
 }
+.colorL{color: #107099;}
+.colorH{color: #cd5528;}
 .square{
     color:#fff;
     height: 80px;

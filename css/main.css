@@ -1414,7 +1414,7 @@ input.checkOut:hover {
 }
 .rentButton a{
     font-family: 'Amatic SC', cursive;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
 }
@@ -1433,8 +1433,10 @@ input.checkOut:hover {
 .rentWrap{    /*JEN NEW*/
     display: flex;
     flex-direction: column;
-/*    align-items: center;*/
+    align-items: center;
+    justify-items: center;
 }
+.rentWrap2{text-align: center;}
 .SBrent ul.listSB{
     display: none;
 }

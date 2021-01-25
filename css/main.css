@@ -253,7 +253,7 @@ input#showSearch, input#srch, input#sm { display: none; }
 header {
     background: rgba(255,255,255,.5) url(../images/headOptMobile.jpg) no-repeat;
     background-blend-mode: lighten;
-    background-size: 100%; /*Burk TEST*/
+    background-size: cover; 
     display: flex;
     flex-direction: column;
 }
@@ -284,7 +284,7 @@ ul.shopMenu{                     /*1-20 ADDED BY JEN*/
     display: none;}
 
 #hamb {                                                       /* ------ 5. ID Selector ------- */
-    font-size: 16px;
+    font-size: 22px;
     color:#107099;
     margin-left: 1.2em;
 }
@@ -368,7 +368,7 @@ footer {
     padding: .5em 1em;
 }
 footer a{
-    font-size: 1.4em;      /*JEN ADDED*/
+    font-size: 1.6em;      /*JEN ADDED*/
     padding: .5em 0;      
 }
 

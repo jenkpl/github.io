@@ -240,7 +240,7 @@ a:hover { color:#cd5528; }                        /* ------ 6. Pseudo-class sele
 }
 .shop li { display: inline-block; }                           
 nav ul li {
-    font-size: 1.4em;
+    font-size: 1.3em;
     display: block;
     text-align: center;
 }
@@ -360,7 +360,6 @@ main {                             /* for mobile first */
     7. FOOTER
 ********************************************************/
 footer {
-    align-items: center;
     background: rgba(255,255,255,.7) url(../images/footOptMobile.jpg) no-repeat;/* BURK ADDED NEW IMAGE */
     background-blend-mode: lighten;
     display: grid;
@@ -369,8 +368,8 @@ footer {
     padding: .5em 1em;
 }
 footer a{
-    font-size: 1.6em;      /*JEN ADDED*/
-    padding: 1em 0;      
+    font-size: 1.4em;      /*JEN ADDED*/
+    padding: .5em 0;      
 }
 
 footer p { font-size: 1.4em; }
@@ -424,258 +423,6 @@ legend {
     color: #107099;
     font-size: 2.6em;
     text-align: center;
-}
-/********************************************************
-    9. MEDIA QUERIES 
-********************************************************/
-/*med-screen/TABLET*/
-@media screen and (min-width:550px) {
-   nav ul li{
-        display: inline-block;
-        margin: 0 10px;
-        padding: 5px;
-    }
-    #hamb { display: none; }
-    .mainnav {
-        color: #483d8b;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-     }
-    .crumb {
-        display: block;
-        font: 700 1.2em 'Nunito Sans', sans-serif; 
-        margin: 1em 1em 2em;
-        text-transform: uppercase;
-    }
-    footer {
-        align-items: center;
-        background: rgba(255,255,255,.8) url(../images/footOpt.jpg) no-repeat; /* BURK ADDED*/
-        background-blend-mode: lighten;/* BURK ADDED*/
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: repeat(7, 1fr);   
-        justify-items: center;
-        margin-top: 1.8em;/* BURK ADDED*/
-     } 
-    footer p { font-size: 1em; }
-    footer input {
-        font-size: 1.4em;
-        padding: .9rem;
-    }
-    header {
-    background: rgba(255,255,255,.5) url(../images/headOpt.jpg) no-repeat;/* BURK ADDED*/
-    background-blend-mode: lighten;/* BURK ADDED*/
-    display: flex;/* BURK ADDED*/
-    flex-direction:column;/* BURK ADDED*/
-    }
-   
-    .icons {
-        font-size: 2em;
-
- /*       grid-column: -1;     JEN COMMENTED OUT
-        grid-row: 2;*/ 
-     text-align: center;
-    }
-    .news{
-        grid-row: 2;
-        grid-column: 6;
-     }
-    
-    .F2, .F3, .F4, .F5, .F6, .F7 {
-        align-self: start;
-        text-align: center;
-     }
-    .F2{ grid-column-start: 2; }
-    
-     .page {                               
-    display: grid;
-    grid-gap: 10px;
-    grid-template-areas:
-       "hlj hsb"
-       "plj psb"
-       "dlj dsb"
-       "mlj msb";
-    }
-    .surfCard{
-            grid-template-columns: 1fr 2fr 1fr;
-    }
-
-.rentWrap{                   /*JEN NEW*/
-    flex-direction: row;
-    justify-content: space-around;
-}
- 
-/*-----CAREER PAGE queries-------*/
-    
-    #career {
-        margin: 1em auto;
-        width: 90%;
-        display: grid;
-        grid-gap: 15px;
-        grid-template-areas: 
-            "p pg";
-        align-content: center;
-        justify-content: center;
-        text-align: left;
-    }
-    
-    #career img {
-        max-width: 300px;
-        height: auto;
-/*        margin-bottom: 30em;*/  /*JEN COMMENTED OUT 124*/
-    }
-    
-/*-----END of CAREER PAGE-----*/
-/*-----FAQ PAGE-------*/    
-    .caShip, .usShip, .woShip {
-        display: flex;
-    }
-    
-    .caShip ul, .usShip ul, .woShip ul {
-        display: flex;
-        flex-direction: column;
-        margin: 2em 2em;
-    }
-/*-----END of FAQ PAGE-----*/  
-    
-/*-----STAFF PAGE queries-------*/
-    
-    #staff {
-        margin: 1em auto;
-        width: 90%;
-        display: grid;
-        grid-gap: 15px;
-        grid-template-areas: 
-            "s1 s2"
-            "c1 c2"
-            "s3 s4"
-            "c3 c4"
-            "s5 s6"
-            "c5 c6";
-        align-content: center;
-        justify-content: center;
-        text-align: center;
-    }
-    
-    #staff p {
-        width: 90%;  
-        height: 40%;  
-        margin: 1em;  
-
-    }
-    
-/*-----END of STAFF PAGE-----*/
-    
-}
- 
-/*BURKLEY'S SECTION MEDIA QUERIES (LG)*/
-@media screen and (min-width: 700px) {
-     
-/*-----CAREER PAGE-------*/
-    #career {
-        margin-top: 10em;
-    }
-    
-    #career img {
-        max-width: 400px;
-        height: auto;
-        margin-bottom: 30em;
-    }
-    
-/*-----END of CAREER PAGE-----*/
-    
-/*-----BLOG PAGE-------*/
-    #blog {
-        margin: 1em auto;
-        width: 90%;
-        display: grid;
-        grid-gap: 15px;
-/*
-        grid-template-areas: 
-            "p1 b2"
-            "p2 b1"
-            "p3 b3";
-*/
-        align-content: center;
-        justify-content: center;
-        text-align: left;
-    }
-    
-
-    #blog img {
-        width: 200px;
-        height: auto;
-    }
-    
-    .blog1, .blog2, .blog3 {
-        border: solid 2px #c1d9e3;
-        padding: 10px;
-        box-shadow: 5px 5px rgba(193, 217, 227, 0.5);
-        display: flex;
-    }
-    
-    .body1, .body2, .body3 {
-        padding-left:1em;
-        width: 90%;
-    }
-    
-    .aTag {
-        font-size: 7px;
-        align-items: flex-end;
-        display: flex;
-        width: 200px;
-        
-    }   
-    
-/*-----END of CAREER PAGE-----*/
-    
-/*-----FAQ PAGE-------*/    
-
-    
-    
-    
-/*-----END of FAQ PAGE-----*/    
-    
-}
-
-
-/*big-screen*/
-@media screen and (min-width: 900px) {
-    
-
-    
-/*-----STAFF PAGE-------*/
-    
-    #staff {
-        margin: 1em auto;
-        width: 90%;
-        display: grid;
-        grid-gap: 15px;
-        grid-template-areas: 
-            "s1 c1 s2 c2"
-            "s3 c3 s4 c4"
-            "s5 c5 s6 c6";
-        align-content: center;
-        justify-content: center;
-        text-align: left;
-    }
-    
-    #staff p {
-        width: 90%;  
-        height: 40%;  
-        margin: 1em;  
-
-    }
-    
-    .s1 img, .s2 img, .s3 img, .s4 img, .s5 img, .s6 img {
-        max-width: 200px;
-        height: auto;
-        margin-top: 2em;
-    }
-    
-/*-----END of STAFF PAGE-----*/
-
 }
 
     
@@ -1682,29 +1429,9 @@ input.checkOut:hover {
     width: 90%;
     display: grid;
     grid-gap: 15px;
-    grid-template-areas:
-        "l1 l2"
-        "l3 l4";
     align-content: center;
     justify-content: center;
     text-align: left; 
-}
-
-.list1 {
-    grid-area: l1;
-}
-
-.list2 {
-    grid-area: l2;
-    margin-bottom: 15px;
-}
-
-.list3 {
-    grid-area: l3;
-}
-
-.list4 {
-    grid-area: l4;
 }
 
 
@@ -1721,6 +1448,261 @@ input.checkOut:hover {
 
 
 /***************     END OF FAQ PAGE      *************/
+
+/********************************************************
+    9. MEDIA QUERIES 
+********************************************************/
+/*med-screen/TABLET*/
+@media screen and (min-width:550px) {
+   nav ul li{
+        display: inline-block;
+        margin: 0 10px;
+        padding: 5px;
+    }
+    #hamb { display: none; }
+    .mainnav {
+        color: #483d8b;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+     }
+    .crumb {
+        display: block;
+        font: 700 1.2em 'Nunito Sans', sans-serif; 
+        margin: 1em 1em 2em;
+        text-transform: uppercase;
+    }
+    footer {
+        align-items: center;
+        background: rgba(255,255,255,.8) url(../images/footOpt.jpg) no-repeat; /* BURK ADDED*/
+        background-blend-mode: lighten;/* BURK ADDED*/
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(7, 1fr);   
+        justify-items: center;
+        margin-top: 1.8em;/* BURK ADDED*/
+     } 
+    footer p { font-size: 1em; }
+    footer input {
+        font-size: 1.4em;
+        padding: .9rem;
+    }
+    header {
+    background: rgba(255,255,255,.5) url(../images/headOpt.jpg) no-repeat;/* BURK ADDED*/
+    background-blend-mode: lighten;/* BURK ADDED*/
+    display: flex;/* BURK ADDED*/
+    flex-direction:column;/* BURK ADDED*/
+    }
+   
+    .icons {
+        font-size: 2em;
+/*
+        grid-column: -1;     JEN COMMENTED OUT
+        grid-row: 2;
+*/
+        text-align: center;
+    }
+    .news{
+        grid-row: 2;
+        grid-column: 6;
+     }
+    
+    .F2, .F3, .F4, .F5, .F6, .F7 {
+        align-self: start;
+        text-align: center;
+     }
+    .F2{ grid-column-start: 2; }
+    
+     .page {                               
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+       "hlj hsb"
+       "plj psb"
+       "dlj dsb"
+       "mlj msb";
+    }
+    .surfCard{
+            grid-template-columns: 1fr 2fr 1fr;
+    }
+
+.rentWrap{                   /*JEN NEW*/
+    flex-direction: row;
+    justify-content: space-around;
+}
+ 
+/*-----CAREER PAGE queries-------*/
+    
+    #career {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-areas: 
+            "p pg";
+        align-content: center;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    #career img {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 30em;
+    }
+    
+/*-----END of CAREER PAGE-----*/
+/*-----FAQ PAGE-------*/    
+    .caShip, .usShip, .woShip {
+        display: flex;
+    }
+    
+    .caShip ul, .usShip ul, .woShip ul {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 2em;
+    }
+/*-----END of FAQ PAGE-----*/  
+    
+/*-----STAFF PAGE queries-------*/
+    
+    #staff {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-areas: 
+            "s1 s2"
+            "c1 c2"
+            "s3 s4"
+            "c3 c4"
+            "s5 s6"
+            "c5 c6";
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #staff p {
+        width: 90%;  
+        height: 40%;  
+        margin: 1em;  
+
+    }
+    
+/*-----END of STAFF PAGE-----*/
+    
+}
+ 
+/*BURKLEY'S SECTION MEDIA QUERIES (LG)*/
+@media screen and (min-width: 700px) {
+     
+/*-----CAREER PAGE-------*/
+    #career {
+        margin-top: 10em;
+    }
+    
+    #career img {
+        max-width: 400px;
+        height: auto;
+        margin-bottom: 30em;
+    }
+    
+/*-----END of CAREER PAGE-----*/
+    
+/*-----BLOG PAGE-------*/
+    #blog {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 15px;
+/*
+        grid-template-areas: 
+            "p1 b2"
+            "p2 b1"
+            "p3 b3";
+*/
+        align-content: center;
+        justify-content: center;
+        text-align: left;
+    }
+    
+
+    #blog img {
+        width: 200px;
+        height: auto;
+    }
+    
+    .blog1, .blog2, .blog3 {
+        border: solid 2px #c1d9e3;
+        padding: 10px;
+        box-shadow: 5px 5px rgba(193, 217, 227, 0.5);
+        display: flex;
+    }
+    
+    .body1, .body2, .body3 {
+        padding-left:1em;
+        width: 90%;
+    }
+    
+    .aTag {
+        font-size: 7px;
+        align-items: flex-end;
+        display: flex;
+        width: 200px;
+        
+    }   
+    
+/*-----END of CAREER PAGE-----*/
+    
+/*-----FAQ PAGE-------*/    
+
+    
+    
+    
+/*-----END of FAQ PAGE-----*/    
+    
+}
+
+
+/*big-screen*/
+@media screen and (min-width: 900px) {
+    
+
+    
+/*-----STAFF PAGE-------*/
+    
+    #staff {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-areas: 
+            "s1 c1 s2 c2"
+            "s3 c3 s4 c4"
+            "s5 c5 s6 c6";
+        align-content: center;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    #staff p {
+        width: 90%;  
+        height: 40%;  
+        margin: 1em;  
+
+    }
+    
+    .s1 img, .s2 img, .s3 img, .s4 img, .s5 img, .s6 img {
+        max-width: 200px;
+        height: auto;
+        margin-top: 2em;
+    }
+    
+/*-----END of STAFF PAGE-----*/
+
+}
+
 
 
 

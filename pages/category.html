@@ -21,30 +21,23 @@
         <body>
         <div class="container">
         
-        <nav class="topshop">
-      
-            <div class="search">
+<nav class="topshop">
+               <div class="search">
                 <label for="showSearch" class="showSearch"><span class="fas fa-search" aria-hidden="true"></span></label>
                 <input type="checkbox" id="showSearch" role="button">
                    <input id="srch" type="text" value="search"></div>
-
-                 <div class="shop">
+                <div class="shop">
                 <ul>
-                <li><a href="#">log in</a></li>
+                <li><a href="pages/styleGuide.html">log in</a></li>
                 <li><a href="#">create account</a></li>
-                <li><span class="fas fa-shopping-cart"></span></li>
-                </ul>
-                </div>
+                <li><span class="fas fa-shopping-cart"></span></li></ul></div>
             </nav>
-            
             <header>
-               
-                <div class="holder">
-                    <a href="../index.html">
-                        <img class="logoTop" src="../images/logoMitch.gif" alt="logo"></a>
-                    <h1>San Diego's Original Surf Shop - since 1967!</h1>
+            <div class="holder">
+                <a href="index.html">
+                    <img class="logoTop" src="../images/logoMitch.gif" alt="Mitchlogo"></a>
+                <h1>San Diego's Original Surf Shop - since 1967!</h1>
                 </div>
-                
             <label for="showMenu" class="showMenu">
            <span id="hamb" class="fas fa-bars" aria-hidden="true"></span></label>
            <input type="checkbox" id="showMenu" role="button">
@@ -52,30 +45,39 @@
             <nav class="mainnav">
                 <ul>
                     <li>
-                    <a href="category.html">Shop</a>
+                    <a href="#">Shop <label for="sm"class="shopIcon"><span class="fas fa-angle-down" aria-hidden="true"></span></label></a>
+                    <input type="checkbox" id="sm">
+                    <ul class="shopMenu">
+                        <li><a href="#">Gear</a></li>
+                        <li><a href="pages/category.html">Surfboards</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">More</a></li>
+                    </ul>
                     </li>
                     <li>
-                    <a href="rentals.html">Rentals</a>
+                    <a href="pages/rentals.html">Rentals</a>
                     </li>
                     <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="#">Blog</a>
                     </li>
                     <li>
-                    <a href="faq.html">FAQ</a>
+                    <a href="#">FAQ</a>
                     </li>
                     <li>
-                    <a href="locations.html">Locations</a>
+                    <a href="pages/locations.html">Locations</a>
                     </li>
                     <li>
-                    <a href="about.html">About Us</a>
+                    <a href="pages/about.html">About Us</a>
                     </li>
                 </ul>
             </nav>
             </header>
+            
+            
     <!---------------------------------------------Category Page content ---------------------------------> 
           <main>
              
-             <p class="crumb"><a href="../index.html">Home</a> &rang; <a href="category.html">Shop</a> &rang; Surfboards </p>
+             <p class="crumb"><a href="../index.html">Home</a> &rang; <a href="#">Shop</a> &rang; Surfboards </p>
              
               <h1>Surfboards</h1>
               
@@ -100,7 +102,7 @@
   </div>  
     
     <div class="slideCat fade">
-     <a href="#"><img src="../images/brandBO.jpg" alt="Standing orange surfboard"></a>
+     <a href="#"><img src="../images/brand1O.jpg" alt="Standing orange surfboard"></a>
     <div class="capt"><a href="#">Brands</a></div>
   </div>
   
@@ -174,7 +176,7 @@ function showSlides(n) {
                      <figcaption class="categoryName"><a href="#">Egg</a></figcaption>
                  </figure>
                  <figure>
-                     <a href="#"><img src="../images/brandBO.jpg" alt="Standing orange surfboard"></a>
+                     <a href="#"><img src="../images/brand1O.jpg" alt="Standing orange surfboard"></a>
                      <figcaption class="categoryName"><a href="#">Brands</a></figcaption>
                  </figure>
                  <figure>
@@ -358,10 +360,10 @@ function showSlides(n) {
            <!--------------------------------------------- End Category Page content --------------------------------->        
             <footer>
            
-                     <div class="F2"><a href="contact.html">contact us</a></div>
-                     <div class="F3"><a href="career.html">careers</a></div>
-                     <div class="F4"><a href="surf.html">surf report</a></div>
-                     <div class="F5"><a href="faq.html">faq</a></div>
+                     <div class="F2"><a href="#">contact us</a></div>
+                     <div class="F3"><a href="#">careers</a></div>
+                     <div class="F4"><a href="#">surf report</a></div>
+                     <div class="F5"><a href="#">faq</a></div>
                      <div class="F6"><a href="#">newsletter</a><p>Subscribe to be the first to hear about exclusive offers and new arrivals:</p></div>
                      <div class="F7"><a href="#">social media</a></div>
                      <div class="news"><label for="sign"><input name="signup" type="text" value="name@email.com" id="sign"></label></div>
@@ -374,7 +376,7 @@ function showSlides(n) {
            
             
             </footer>
-            <div class="bottom">&copy;Copyright 2021 | MITCH'S SURF SHOP |<a href="styleGuide.html"> Privacy Policy</a></div>
+            <div class="bottom">&copy;Copyright 2021 | MITCH'S SURF SHOP |<a href="#"> Privacy Policy</a></div>
            
              
               
